@@ -1,0 +1,1018 @@
+ 
+🎬 MENAHIL FATIMA 
+A MENAHIL FATIMA ORIGINAL 
+Computer Science · Cybersecurity · AI/ML · Full-Stack Development · Mobile Apps 
+Beaconhouse National University · CGPA 3.79 · Dean's Honor List · Third Year 
+📧 menahilfatimakhan.mfk@gmail.com · 📞 0321-4258890 · 🔗 
+linkedin.com/in/menahil-fatima-k2004 
+ 
+WHO'S WATCHING? 
+💼 RECRUITER 
+🎓 STUDENT 
+🌐 EXPLORER 
+Hiring Manager Mode 
+Peer & Collaborator Mode 
+Just Browsing? 
+Welcome. 
+ 
+ 
+▶ ABOUT THIS SERIES 
+Menahil Fatima is a third-year Computer Science student at Beaconhouse National University, 
+Lahore — building at the intersection of cybersecurity, artificial intelligence, and full-stack 
+development. This portfolio is a complete, season-by-season record of every project, internship, 
+late-night debugging session, award, and lesson learned from Year 1 to present. 
+Selected for Pakistan's inaugural APAC Cyber Clinic cohort, co-designed with Google.org, The 
+Asia Foundation, and the Global Cyber Alliance. Recipient of the AI Innovation Distinction 
+Award from Devsinc CEO Usman Asif. IEEE-published researcher. Dean's Honor List every 
+semester without exception. Merit Scholarship holder. This is not just a portfolio — it is a 
+production. 
+●​ GENRES: Cybersecurity · AI & ML · Full-Stack Web · Mobile · Digital Forensics · NLP · 
+Database Systems · Social Impact Tech 
+●​ STATUS: 🟢 Ongoing — Season 6 (Spring 2026) currently in production 
+●​ RATED: CS — Suitable for hiring managers, technical peers, professors, and curious 
+humans 
+●​ LANGUAGES: Python · C++ · JavaScript · SQL · Dart · English · Urdu 
+●​ HOME BASE: Lahore, Pakistan 
+●​ AVAILABLE: Internships — Cybersecurity · Software Engineering · AI/ML Research · 
+Full-Stack 
+●​ CONTACT: menahilfatimakhan.mfk@gmail.com · 0321-4258890 
+ 
+📺 SEASON 1 — THE ORIGIN STORY 
+Fall 2023 
+Year one. Two web projects, a steep HTML/CSS learning curve, and the first glimpse of what 
+building things actually feels like. Every great developer has a Season 1. This is mine. 
+ 
+EPISODE 01 — Arcelia — Luxury Hotel Website 
+92% Match 
+Where elegance meets the DOM. The very first deployment. 
+●​ Period: Nov 2023 – Dec 2023 
+●​ Course: Website Development — Semester 1 
+●​ Genre: Front-End · Hospitality Tech · UI/UX · Responsive Design 
+●​ Status: ✅ Completed 
+THE PLOT 
+Arcelia is the first real website ever built — a fully designed, multi-page hotel experience for a 
+fictional five-star property on Sentosa Island, Singapore. Every layout decision, every colour 
+choice, every hover effect was deliberate. This project was the introduction to thinking like a 
+developer AND a designer simultaneously: how does a page make someone feel? Does it load 
+correctly on mobile? Are the buttons where a human would expect them? It was the project that 
+answered the question: can I actually build things? The answer was yes. 
+KEY FEATURES 
+●​ Sign Up / Authentication — user registration flow with form validation 
+●​ Restaurant Showcase — full dining experience page with rich visual hierarchy 
+●​ Accommodation Listings — room categories with descriptive content and imagery layout 
+●​ Sustainability Section — environmental commitment and initiatives page 
+●​ Contact Us — functional contact form with field validation 
+●​ Responsive Design — cross-device layout compatibility throughout 
+●​ Navigation — sticky header with smooth section-to-section linking 
+TECH STACK: HTML5 · CSS3 · Front-End Development 
+👥 COLLABORATORS: Manahil Tanweer, Hania Atta 
+💡 WHAT I LEARNED: Design decisions ARE technical decisions. Padding, line-height, and 
+colour contrast are not aesthetic preferences — they are user experience engineering. Learning 
+this in Semester 1 changed how every subsequent project was approached. 
+ 
+EPISODE 02 — Dandelions — Botanical Garden Website 
+100% Match 🏆🏆 
+The one that won twice. The project that made it clear this was the right path. 
+●​ Period: Nov 2023 – Jan 2024 
+●​ Course: Website Development — Semester 1 
+●​ Genre: Front-End · E-Commerce · Award Winner · Educational Platform 
+●​ Status: ✅ Completed · Double Award Winner 
+●​ 🏆 Best Team Project — Web Development (NETSOL × Ayub Ghauri, 2024) 
+●​ 🏆 Best Team Project — Programming (NETSOL × Ayub Ghauri, 2024) 
+THE PLOT 
+What started as a semester deliverable became the first award-winning project. Dandelions is a 
+full-featured botanical garden website for a fictional garden in Singapore — built to educate, 
+engage, and inspire. The project was recognized at the 2024 BNU Project Showcase across 
+two separate categories simultaneously, a rare double sweep. Beyond the technical 
+achievement, Dandelions was the creative turning point — the moment a project stopped feeling 
+like coursework and started feeling like something worth being proud of. The e-shop, learning 
+modules, and gallery were each designed with intention, not just instruction. 
+KEY FEATURES 
+●​ Sign In / Register — user authentication with session handling and persistent login state 
+●​ E-Shop — plant catalogue with product pages, cart functionality, and checkout flow 
+●​ Activities & Events — listing and filtering of garden events and workshops 
+●​ Sustainability Efforts — environmental initiatives dedicated section 
+●​ Interactive Gallery — visual showcase of botanical species and garden spaces 
+●​ Learning Through Plants — educational module with plant profiles and interactive facts 
+●​ Contact Us — inquiry form with embedded location 
+●​ Responsive Design — Bootstrap grid system for seamless mobile and desktop 
+experience 
+●​ Cross-Device Compatibility — tested across screen sizes and browsers 
+TECH STACK: HTML5 · CSS3 · Bootstrap 5 · JavaScript (Vanilla) · Front-End Development 
+👥 COLLABORATORS: Manahil Tanweer, Hania Atta 
+💡 WHAT I LEARNED: Winning isn't the goal — building something genuinely useful is. The 
+awards followed naturally from caring about the user experience at every step. That lesson 
+holds for every project since. 
+ 
+📺 SEASON 2 — THE C++ ARC 
+Spring 2024 
+The semester that introduced proper computer science. Algorithms, OOP, and the satisfying 
+brutality of a terminal-based application with no framework to hide behind. One project — but a 
+foundational one. 
+ 
+EPISODE 01 — Gaming Hub — Terminal Arcade Engine 
+95% Match 
+A terminal-based arcade built on pure C++ and raw logic. No shortcuts. No GUI. Just code. 
+●​ Period: Apr 2024 – Jun 2024 
+●​ Course: Programming Fundamentals — Semester 2 
+●​ Genre: Game Development · C++ · OOP · Data Structures & Algorithms · Retro 
+Terminal 
+●​ Status: ✅ Completed 
+THE PLOT 
+Gaming Hub is a console application that hosts five distinct single-player games inside one 
+unified platform — built entirely in C++. No game engines, no libraries, no frameworks. Just 
+Object-Oriented Programming, custom data structures, and a terminal. The challenge was not 
+just building games, but architecting a system that manages user accounts, persists scores 
+across sessions, scales difficulty, rewards milestones, and maintains state — all within a 
+command-line interface. This project introduced thinking architecturally: how do you organize 
+code so that adding a sixth game doesn't break the other five? These questions shaped every 
+design decision — and their answers became the foundation for every system built afterward. 
+KEY FEATURES 
+●​ Login & Sign Up — user account creation with encrypted storage and persistent 
+sessions 
+●​ Player Profiles — personalized dashboards with scores, progress history, and statistics 
+per game 
+●​ Five Distinct Games — each with independent logic, win/loss conditions, and scoring 
+mechanics 
+●​ Difficulty Scaling — Easy / Medium / Hard modes with adaptive challenge parameters 
+per game 
+●​ Achievements System — milestone-based badge rewards (e.g., 'Win 10 in a row', 
+'Reach 1000 points') 
+●​ Leaderboards — score ranking with historical comparison and self-competition mode 
+●​ Randomizer Module — shuffle mode selecting a surprise game from the hub 
+●​ Time & Tries Limit — pressure mode with countdown timer and attempt constraints 
+●​ Account Management — edit username, reset scores, or delete account with 
+confirmation step 
+●​ Data Persistence — custom file I/O system saving and loading all user data between 
+runs 
+TECH STACK: C++ · Object-Oriented Programming (OOP) · Custom Data Structures & 
+Algorithms · File I/O · Terminal UI Design 
+💡 WHAT I LEARNED: Architecture matters more than features. A well-structured codebase 
+lets you add the sixth game in an afternoon. A poorly structured one means rewriting everything. 
+This was the project that made that lesson permanent. 
+ 
+SPECIAL EPISODE — SUMMER 2024 | WORK 
+EXPERIENCE 
+Software Development Intern @ Sense.ai 
+97% Match 
+First industry deployment. First real client. First production website. No professor to check the 
+work. 
+●​ Period: Jun 2024 – Aug 2024 (2 months) 
+●​ Company: Sense.ai — AI-driven productivity and personal growth platform 
+●​ Type: Internship · On-site / Remote · Lahore, Pakistan 
+●​ Genre: Front-End Development · Professional Experience · Production Deployment 
+●​ Status: ✅ Completed 
+THE PLOT 
+The bridge between academia and industry. At Sense.ai, the assignment was to design and 
+build their official company website from scratch — a site representing a real AI startup's brand 
+to real customers. No sample solution, no marking rubric, no retry button. The full 
+design-to-deployment cycle was owned end-to-end: brand identity workshops, UI decisions, 
+front-end implementation, cross-functional content integration, and performance optimization 
+before launch. 
+KEY CONTRIBUTIONS 
+●​ Website Design & Development — full website built from zero: wireframes → design → 
+development → live deployment 
+●​ Front-End Engineering — responsive, accessible, performant UIs in HTML5, CSS3, and 
+JavaScript 
+●​ UX/UI Design — user experience decisions rooted in Sense.ai's brand vision and target 
+user personas 
+●​ Cross-Functional Collaboration — coordinated with content, product, and leadership 
+teams to integrate messaging and case studies 
+●​ Performance Optimization — asset compression, code refactoring, and lazy loading; 
+15% reduction in page load time 
+●​ Engagement Impact — UX improvements drove a measurable 20% increase in user 
+engagement post-launch 
+TECH STACK: HTML5 · CSS3 · Bootstrap · JavaScript (Vanilla) · Responsive Web Design · Git 
+· GitHub 
+💡 WHAT I LEARNED: Industry moves faster than university. A decision that takes a week in a 
+group project gets made in an afternoon with a real client. Learning to make confident, 
+well-reasoned decisions quickly is the real internship outcome. 
+ 
+📺 SEASON 3 — THE DATABASE ARC 
+Fall 2024 
+Year Two begins. OOP, databases, and a real client. The semester that introduced persistence, 
+normalization, and the quiet satisfaction of a perfectly structured schema. Also: first teaching 
+role. 
+ 
+EPISODE 01 — Banking Management System 
+96% Match 
+Secure. Scalable. Object-Oriented. What banking looks like when C++ meets MySQL. 
+●​ Period: Nov 2024 – Dec 2024 
+●​ Course: Object-Oriented Programming (OOP) — Semester 3 
+●​ Genre: FinTech · Backend Architecture · C++ · Database Integration · OOP 
+●​ Status: ✅ Completed 
+THE PLOT 
+A comprehensive financial simulation engine bridging volatile runtime code with permanent 
+relational storage. The system simulates end-to-end banking operations — from secure account 
+creation and authentication through live transaction tracking to persistent record storage — 
+demonstrating full command of OOP principles including Polymorphism, Inheritance, and 
+Encapsulation. The architectural challenge was connecting a C++ application layer to a live 
+MySQL database in real time. Every transaction had to be written immediately and retrieved 
+correctly on next login. No data lost between sessions. No account accessible without proper 
+authentication. 
+KEY FEATURES 
+●​ Secure Authentication — encapsulated login system with password management and 
+account lockout after failed attempts 
+●​ Account Management — create, view, update, and close accounts with role verification 
+●​ The Ledger — real-time deposit and withdrawal processing with instant balance update 
+●​ Transaction History — complete timestamped log of all operations, retrievable per 
+account 
+●​ C++ to MySQL Bridge — live bidirectional data flow between application and relational 
+database 
+●​ OOP Architecture — class hierarchy: Account (base) → SavingsAccount, 
+CurrentAccount (derived) 
+●​ Polymorphism — overridden interest calculation and overdraft rules per account type 
+●​ Error Handling — robust input validation and exception management throughout 
+●​ Admin Mode — privileged access tier for system-wide account oversight and reports 
+TECH STACK: C++ · MySQL · OOP (Polymorphism · Inheritance · Encapsulation) · MySQL 
+Connector/ODBC · File I/O 
+💡 WHAT I LEARNED: Connecting code to a database changes everything. Data stops being a 
+variable and starts being permanent. That shift — from ephemeral to persistent — is 
+fundamental to building real software. 
+ 
+EPISODE 02 — Skinsations Clinic Database 
+97% Match 
+Real-world data infrastructure for a real client. Not a simulation — a production-grade design. 
+●​ Period: Oct 2024 – Jan 2025 
+●​ Course: Database Systems — Semester 3 
+●​ Genre: Healthcare Tech · Real-World Client · Relational Database Design · ERD 
+●​ Status: ✅ Completed · Client-Delivered 
+THE PLOT 
+Most database projects are textbook exercises. This one was different. Skinsations is a real 
+aesthetic clinic in Lahore — and this project involved working with actual stakeholders to 
+understand real operational workflows, then translating those into a fully normalized, 
+production-grade relational database. Stakeholder interviews mapped the clinic's actual data 
+flows: patient registration, appointment booking, treatment logging, billing, inventory. Every 
+design decision emerged from a real requirement. The result was a schema that didn't just work 
+in theory — it worked for the clinic's actual operations. 
+KEY FEATURES 
+●​ Patient Profile Management — complete records with medical history, contact details, 
+and treatment preferences 
+●​ Appointment Scheduling — booking, rescheduling, cancellation with conflict detection 
+and calendar view 
+●​ Treatment Logs — per-visit records including treatments administered, products used, 
+and clinician notes 
+●​ Staff & Clinician Records — staff profiles with role-based data access control 
+●​ Billing & Payment Tracking — invoice generation, payment status, and outstanding 
+balance management 
+●​ Inventory Management — product and supply tracking linked to treatment records 
+●​ Normalized Schema (3NF) — full third normal form to eliminate redundancy and ensure 
+data integrity 
+●​ Entity-Relationship Diagram — complete ERD with all entities, attributes, and 
+cardinalities documented 
+●​ Optimized SQL Queries — complex scripts for fast retrieval, reporting, and data insertion 
+●​ Client Consultation Process — requirements gathered through direct stakeholder 
+interviews with clinic staff 
+TECH STACK: MySQL · Relational Database Design · Entity-Relationship Diagrams (ERD) · 
+Schema Normalization (3NF) · SQL Scripting 
+💡 WHAT I LEARNED: Client work is a completely different discipline. A theoretically perfect 
+schema the client can't understand is a failed project. Translation — from human workflow to 
+relational structure — is half the job. 
+ 
+BONUS EPISODE — FALL 2024 | LEADERSHIP 
+Teaching Assistant — Applied Physics Lab​
+​
+Note: I have also been TA for AI Lab, ICT Lab & 
+Programming Fundamentals So find a way to group them 
+up together  
+When you know something well enough to teach it, you actually know it. 
+●​ Period: Oct 2024 – Jan 2025 
+●​ Organization: Beaconhouse National University — Applied Physics Lab 
+●​ Genre: Leadership · Education · Technical Communication 
+●​ Status: ✅ Completed 
+THE PLOT 
+Selected by faculty to support the Applied Physics Lab as a Teaching Assistant — one of the 
+earliest leadership roles in the degree. Responsibilities included facilitating hands-on lab 
+sessions, guiding experimental procedures, troubleshooting equipment issues in real time, and 
+delivering structured written feedback on 100+ submitted lab reports across the semester. 
+Beyond the technical side, this role developed two skills no coding project can teach: explaining 
+complex ideas simply, and the patience to meet learners exactly where they are. 
+KEY RESPONSIBILITIES 
+●​ Lab Facilitation — led weekly hands-on lab sessions guiding students through 
+experimental procedures 
+●​ Real-Time Troubleshooting — diagnosed and resolved equipment, measurement, and 
+calculation issues during live sessions 
+●​ Report Grading — assessed 100+ lab reports per semester with detailed, constructive 
+written feedback 
+●​ Academic Support — held supplementary help sessions for students needing additional 
+guidance 
+●​ Curriculum Contribution — collaborated with faculty on session planning and material 
+improvement 
+💡 WHAT I LEARNED: Teaching is the best test of your own understanding. If you can explain 
+a concept clearly to someone seeing it for the first time, you actually know it. If you can't — you 
+have more to learn, and that's valuable information. 
+ 
+📺 SEASON 4 — THE AI AWAKENING 
+Spring 2025 
+The breakout season. LLMs, RAG, web scraping, a cross-department collaboration, an 
+IEEE-published research paper, and two industry awards. The semester that changed 
+everything. 
+ 
+EPISODE 01 — Finnovation — Intelligent Finance Chatbot 
+96% Match 
+Your money, but make it AI. Context-aware, retrieval-augmented, actually useful. 
+●​ Period: Jan 2025 
+●​ Organization: 4X Pillars 
+●​ Genre: FinTech · AI · NLP · Conversational AI · RAG · LLM Integration 
+●​ Status: ✅ Completed 
+THE PLOT 
+Finnovation is an AI-powered finance assistant that answers real financial questions with 
+context, accuracy, and up-to-date information. The core challenge with financial chatbots is 
+staleness: a model trained on static data becomes unreliable the moment market conditions 
+change. Finnovation solves this with Retrieval-Augmented Generation (RAG) — a pipeline that 
+dynamically retrieves relevant documents and live data at query time, then passes them as 
+context to an LLM to generate grounded, accurate responses. Every component was 
+engineered for financial domain accuracy, where a hallucinated figure can have real 
+consequences. 
+KEY FEATURES 
+●​ RAG Pipeline — complete retrieval-augmented generation architecture: ingest → chunk 
+→ embed → retrieve → generate 
+●​ LLM Integration — large language model backbone with conversation memory for 
+coherent multi-turn dialogue 
+●​ NLP Query Understanding — intent recognition and named entity extraction for financial 
+terminology 
+●​ Context-Aware Responses — multi-turn conversation history preserved for coherent 
+follow-up handling 
+●​ Real-Time Data Integration — external API connections to live financial data sources 
+●​ Grounded Generation — retrieved documents passed as context to prevent hallucination 
+on factual data 
+●​ Domain Prompt Engineering — system prompts optimized for financial assistant 
+behavior and safety 
+TECH STACK: Python · NLP · Retrieval-Augmented Generation (RAG) · LLMs · HuggingFace 
+Transformers · Vector Embeddings · External APIs 
+💡 WHAT I LEARNED: RAG is the gap between an AI that sounds smart and an AI that 
+actually is smart. Building the pipeline yourself makes it obvious why grounding matters — 
+especially in high-stakes domains where a wrong figure isn't just an error, it's potentially harmful. 
+ 
+EPISODE 02 — Grantify — Automated Research Grant 
+Monitor 
+94% Match 🏆 
+Eliminating the manual grind. Automated grant discovery for a real university department. 
+●​ Period: Mar 2025 – Apr 2025 
+●​ Organization: BNU Office of Research & Partnerships (ORIP) 
+●​ Genre: Automation · Web Scraping · Research Infrastructure · Real Client · AI 
+●​ Status: ✅ Completed · Best Project Award — AI Category, BNU Project Display 2025 
+●​ 🏆 Best Project Award — AI Category, BNU Project Display 2025 (Usman Asif, CEO — 
+Devsinc) 
+THE PLOT 
+BNU's Office of Research & Partnerships was manually monitoring dozens of grant databases, 
+funding bodies, and government portals — hours of weekly effort that still missed deadlines. 
+Grantify automates the entire pipeline: scrapes target sources on a schedule, parses new 
+listings for title, deadline, eligibility, and funding amount, filters by relevance to BNU's research 
+areas, and fires structured notifications to the relevant staff. A multi-hour weekly task becomes a 
+zero-effort automated workflow that never misses a deadline. The project won Best Project in 
+the AI Category at BNU's 2025 Project Display, presented by Usman Asif, CEO of Devsinc. 
+KEY FEATURES 
+●​ Automated Web Scraping — scheduled crawling of multiple grant databases and 
+government funding portals 
+●​ Smart Parsing Engine — structured extraction of grant title, issuer, deadline, eligibility, 
+funding amount, and application URL 
+●​ Relevance Filtering — keyword and domain matching to surface only grants relevant to 
+BNU research areas 
+●​ Notification Pipeline — automated email alert system delivering structured grant 
+summaries to ORIP staff 
+●​ Deduplication System — prevents repeat notifications for already-seen grants across 
+scraping cycles 
+●​ Configurable Scheduling — daily / weekly run frequency with comprehensive audit 
+logging 
+●​ Error Handling — graceful recovery when target sites change structure or go temporarily 
+offline 
+TECH STACK: Python · Beautiful Soup 4 · Requests · Schedule / Cron · Email Automation 
+(smtplib) · Data Parsing · Web Scraping 
+👥 COLLABORATORS: Hania Atta, Abdul Hadi Jalal 
+🎓 MENTOR: Dr. Usman Nazir 
+💡 WHAT I LEARNED: Automation is not about replacing humans — it's about freeing them for 
+the work that actually requires a human. Grantify didn't eliminate the ORIP team's jobs. It gave 
+them their Mondays back. 
+ 
+EPISODE 03 — AfterLight — Narrative Browser-Based 
+Game 
+93% Match 🏆 
+Arts meets engineering. A dystopian world, child-bots, and a cross-department collaboration 
+that won the room. 
+●​ Period: Mar 2025 – Apr 2025 
+●​ Organization: BNU Connect — SCIT × SVAD Inter-Department Collaboration 
+●​ Genre: Game Development · Narrative Design · Cross-Disciplinary · Browser-Based · 
+UI/UX 
+●​ Status: ✅ Completed · Award of Excellence — BNU Connect 2025 
+●​ 🏆 Award of Excellence — BNU Connect 2025 
+THE PLOT 
+AfterLight is a narrative browser-based game set in a dystopian world where humanity no longer 
+exists. AI systems are training child-bots by revisiting the downfall of human civilization — a 
+story about the consequences of human choices. Built as a graduating SVAD (School of Visual 
+Arts & Design) student's thesis project, it required genuine collaboration between computer 
+science and visual arts to bring the vision to life. The challenge was translational: encoding a 
+rich artistic and narrative vision in code without losing its meaning. Every UI decision, every 
+interaction mechanic, every transition had to serve the story. The Award of Excellence at BNU 
+Connect 2025 recognized what happens when two disciplines genuinely collaborate rather than 
+just coexist. 
+KEY CONTRIBUTIONS 
+●​ C++ Game Logic — core mechanics engine: player state management, narrative 
+branching, win/loss condition handling 
+●​ UI/UX Design — interface matching the dystopian aesthetic: dark palette, atmospheric 
+typography, minimal HUD 
+●​ Browser Integration — C++ game logic bridged to web-facing front-end for accessible 
+browser delivery 
+●​ Narrative Mechanics — interactive decision trees advancing the story based on player 
+choices 
+●​ Dynamic Interactions — animated transitions, event-driven interactions, responsive 
+layout 
+●​ Cross-Department Coordination — sustained collaboration between SCIT and SVAD for 
+unified vision 
+TECH STACK: C++ · JavaScript · HTML5 · CSS3 · UI/UX Design · Browser-Based Game 
+Architecture 
+👥 COLLABORATORS: SVAD Thesis Student (Collaborating Artist & Narrative Designer) 
+💡 WHAT I LEARNED: The best technical work disappears into the experience. In AfterLight, 
+the goal was for the player to feel the story — not notice the code. Learning to subordinate 
+technical choices to creative purpose makes everything better. 
+ 
+SPECIAL EPISODE — SPRING 2025 | RESEARCH 
+PUBLICATION 
+AzureIQ-RAG — IEEE ICIT 2025 Published Paper 
+100% Match 📄 
+From coursework to conference proceedings. A published IEEE paper as a third-year 
+undergraduate. 
+●​ Period: Spring 2025 
+●​ Venue: IEEE ICIT 2025 — International Conference on Industrial Technology 
+●​ Title: AzureIQ-RAG: Azure Powered Intelligent Query and Retrieval-Augmented 
+Generation 
+●​ Genre: AI Research · RAG · Azure Cloud · Academic Publication · Peer-Reviewed 
+●​ Status: ✅ Published — IEEE ICIT 2025 
+THE PLOT 
+A research paper on AzureIQ-RAG — an Azure-powered intelligent query system built on 
+Retrieval-Augmented Generation — was accepted and published at IEEE ICIT 2025. Getting 
+research accepted at an IEEE conference as a third-year undergraduate is not a common 
+achievement. The paper explores how Azure's cloud infrastructure can be leveraged to build 
+production-grade RAG pipelines — combining Azure Cognitive Search, Azure OpenAI, and 
+storage services into an intelligent, scalable query-answering system, addressing real limitations 
+of static LLMs in enterprise knowledge management. 
+KEY CONTRIBUTIONS 
+●​ Novel RAG Architecture — AzureIQ-RAG pipeline integrating Azure Cognitive Search + 
+Azure OpenAI for grounded enterprise query resolution 
+●​ Experimental Evaluation — benchmarking of retrieval accuracy, response quality, and 
+latency across document corpus sizes 
+●​ Azure Cloud Integration — full implementation on Azure infrastructure for enterprise 
+scalability and deployment readiness 
+●​ Academic Writing — complete research paper written to IEEE conference publication 
+standards 
+●​ Peer Review Process — paper reviewed and accepted through formal IEEE peer review 
+TECH STACK: Python · Azure Cognitive Search · Azure OpenAI · Retrieval-Augmented 
+Generation · Cloud Architecture · NLP 
+💡 WHAT I LEARNED: Writing a research paper forces a precision that code alone doesn't 
+require. Every claim needs evidence. Every design decision needs justification. The discipline of 
+academic writing makes the engineering thinking sharper. 
+ 
+SPECIAL EPISODE — SPRING 2025 | WORK 
+EXPERIENCE 
+Research & Outreach Analyst @ Digital Ocean WET 
+Program 
+91% Match 
+Data-driven impact for Pakistan's digital transformation. Early morning buses and cups of chai 
+included. 
+●​ Period: Apr 2025 – Present 
+●​ Organization: Digital Ocean Women Entrepreneurs Training (WET) Program — BNU × 
+DigitalOcean 
+●​ Type: Part-Time Analyst · Field + Office · Lahore and Regional Sites, Pakistan 
+●​ Genre: Research · Data Analysis · Social Impact · Women's Empowerment · Field 
+Outreach 
+●​ Status: 🟢 Ongoing 
+THE PLOT 
+The WET Program trains women entrepreneurs across Pakistan in digital transformation — 
+helping them adopt technology to grow their businesses. As Research & Outreach Analyst, the 
+role is to measure whether the training actually works. This means field visits to regional training 
+sites, stakeholder interviews with participating entrepreneurs, data collection on 
+pre/post-training business outcomes, and reporting findings back to program leadership. It is 
+equal parts researcher, analyst, and community liaison — and it involves genuine conversations 
+with women whose resilience is remarkable. 
+KEY RESPONSIBILITIES 
+●​ Data Collection — qualitative interviews and quantitative surveys at regional sites 
+including University of Okara and FCCU Lahore 
+●​ Impact Analysis — measuring pre/post-training outcomes: digital adoption rates, 
+business revenue changes, tool usage 
+●​ Stakeholder Engagement — ongoing communication with 50+ participating 
+entrepreneurs to assess challenges and progress 
+●​ Field Visits — on-site presence at training events across Punjab province 
+●​ Report Writing — structured impact assessment reports delivered to program leadership 
+and BNU faculty 
+●​ Strategic Recommendations — data-backed proposals for curriculum adjustments and 
+targeted participant support 
+●​ Photography & Documentation — visual documentation of program events for 
+institutional records 
+👥 COLLABORATORS: Team Lead: Hafiz Muhammad Abubakar · Fellow Analyst: Tayyab 
+Mahmood 
+🎓 MENTOR: Dr. Usman Nazir, Mr. Nouman Ali 
+💡 WHAT I LEARNED: Technology solves the wrong problem if you don't understand the 
+people it's supposed to serve. Sitting with a woman entrepreneur in Okara and listening to her 
+actual barriers — not assumed ones — changes how you think about what to build and why. 
+ 
+📺 SEASON 5 — THE FLAGSHIP SEASON 
+⭐ 
+Fall 2025 
+The season everything leveled up. Deepfake detection. Pakistan's first women's safety 
+super-app. Pakistan's first APAC Cyber Clinic. A hackathon to lead. This is the one. 
+ 
+EPISODE 01 — Digital Forensics: Deepfake Detection via 
+CNNs 
+99% Match 🔥 
+Because not everything you see is real — and someone has to build the system that catches 
+the fakes. 
+●​ Period: Dec 2025 – Jan 2026 
+●​ Organization: Beaconhouse National University — Deep Learning Research Project 
+●​ Genre: AI · Digital Forensics · Computer Vision · Deep Learning · Explainable AI · 
+Cybersecurity 
+●​ Status: ✅ Completed 
+THE PLOT 
+Deepfakes are one of the defining threats of the AI era. As generative models — GANs and 
+Diffusion Models — become accessible to anyone with a GPU and an internet connection, the 
+ability to detect AI-generated imagery becomes critical infrastructure for journalism, law 
+enforcement, and social media platforms. This project builds that detection system. 
+An end-to-end deep learning pipeline was designed and implemented to classify real 
+photographs versus AI-generated images with the precision required for forensic-grade 
+verification. Three architectures were built, trained, and benchmarked — not to find a single 
+winner, but to understand the full trade-off landscape: accuracy vs. efficiency, server-side vs. 
+edge deployment, semantic robustness vs. lightweight portability. 
+Grad-CAM was integrated to confirm the model detects actual generative artifacts — the subtle 
+texture anomalies GANs and diffusion models leave behind — not facial identity patterns. This is 
+the difference between a model that works and a model that can be trusted in court. 
+ARCHITECTURE COMPARISON 
+●​ Baseline CNN — custom architecture identifying high-frequency GAN pixel artifacts: 
+spatial noise patterns, checkerboard artifacts, and texture inconsistencies that 
+distinguish synthetic from real at the signal level 
+●​ Xception (Fine-Tuned Transfer Learning) — depthwise separable convolutions 
+capture rich semantic features. Fine-tuned on the forensic dataset for server-side 
+deployment; optimized for precision to minimize false positives in forensic contexts 
+●​ MobileNetV2 (Edge-Optimized) — lightweight architecture proving real-time deepfake 
+detection on mobile and edge hardware. Forensic tools don't require a data centre. 
+ENGINEERING HIGHLIGHTS 
+●​ Memory-Efficient Data Pipeline — custom lazy-loading with manual path shuffling to 
+prevent data leakage on hardware-constrained environments 
+●​ Grad-CAM (Explainable AI) — gradient-weighted class activation maps confirming 
+detection of hair-strand irregularities and background texture artifacts — NOT facial 
+identity 
+●​ Training Optimization — Adam optimizer, Binary Crossentropy loss, 
+ReduceLROnPlateau scheduling, early stopping to prevent overfitting 
+●​ Transfer Learning Pipeline — ImageNet weights fine-tuned on forensic dataset; upper 
+layers unfrozen in stages to prevent catastrophic forgetting 
+●​ Comparative Benchmarking — precision, recall, F1-score, AUC-ROC evaluated across 
+all three architectures 
+TECH STACK: Python · TensorFlow · Keras · CNN Design · Transfer Learning (Xception · 
+MobileNetV2) · Grad-CAM (XAI) · NumPy · Pandas · Matplotlib · Scikit-learn 
+💡 WHAT I LEARNED: The gap between 'it works' and 'it can be trusted' is enormous in 
+forensic AI. A model with 97% accuracy you can't explain is less useful in a legal context than 
+an 89% model with interpretable, auditable decision logic. Explainability is not a nice-to-have — 
+it is the product. 
+ 
+EPISODE 02 — Umeed-e-Zann — Women's Safety & 
+Empowerment App 
+98% Match 💜 
+Pakistan's first digital ecosystem built by women, for women. Hope, reimagined through 
+technology. 
+●​ Period: Fall 2025 
+●​ Event: BNU Fall 2025 Project Display — Received overwhelming response 
+●​ Meaning: Umeed = Hope · Zann = Woman · وجود زن سے ہے تصویر کائنات میں رنگ 
+●​ Genre: Mobile App · Flutter · Social Impact · AI Integration · Women's Tech · Safety 
+●​ Status: ✅ Presented at BNU Fall 2025 Project Display 
+THE PLOT 
+Umeed-e-Zann answers a question that shouldn't still need answering in 2025: where does a 
+woman in Pakistan go when she needs safety, legal guidance, health information, mental health 
+support, or simply a community that understands? Too often the answer is: nowhere good 
+enough. This platform was built to change that. 
+Named for Umeed (hope) and Zann (woman), and rooted in the verse وجود زن سے ہے تصویر کائنات 
+میں رنگ — the world takes its colour from the existence of women — Umeed-e-Zann was 
+designed from the first screen to feel like a safe space: calming, reassuring, judgment-free. 
+Every feature exists because a real woman in Pakistan has a real unmet need for it. The 
+response at BNU's Fall 2025 Project Display was overwhelming — judges, faculty, and students 
+who explored the app understood the vision immediately. 
+PLATFORM PILLARS & FEATURES 
+●​ Safety & Emergency Support — one-tap SOS with live location sharing to trusted 
+contacts, emergency service directory, and safe route guidance 
+●​ Women's Health & Wellness — expert-verified health information covering reproductive 
+health, mental wellness, and preventive care in Urdu and English 
+●​ Legal Aid with AI Assistance — AI-powered legal guidance translating Pakistani law into 
+plain accessible language; case type identification and referral to verified legal aid 
+organisations 
+●​ Mental Health Support — self-assessment tools, curated coping resources, and directory 
+of licensed mental health professionals 
+●​ Community Spaces — moderated peer-to-peer support forums; topic-based 
+communities for shared experiences 
+●​ Women-Led Marketplace — platform for women entrepreneurs to list products and 
+services 
+●​ Learning, Mentorship & Growth — curated skill-building courses, mentorship matching, 
+and career development resources 
+●​ Safe Design Language — UI/UX crafted for psychological safety: soft palette, clear 
+typography, non-intimidating navigation 
+●​ Bilingual Interface — full Urdu and English throughout the application 
+TECH STACK: Flutter · Dart · AI Integration (Legal Aid Module) · REST APIs · Mobile UI/UX 
+Design · State Management 
+👥 COLLABORATORS: Hania Atta, Abdul Hadi Jalal, Zoya Khan 
+🎓 MENTOR: Mr. Asim Irshad 
+💡 WHAT I LEARNED: The most important thing you can do as a developer is care about the 
+person on the other side of the screen. Every feature, every design decision, every word in the 
+UI exists to make someone feel less alone. That is what this degree is for. 
+ 
+SPECIAL EPISODE — FALL 2025 | WORK EXPERIENCE 
+Cybersecurity Trainee @ InnovAtrium — APAC Cyber 
+Clinic 
+99% Match 🔒 
+Pakistan's first. Google.org × The Asia Foundation × Global Cyber Alliance. History being made. 
+●​ Period: Nov 2025 – Present 
+●​ Organization: InnovAtrium — Google.org · The Asia Foundation · Global Cyber Alliance 
+●​ Type: Contract · On-site · Lahore, Pakistan 
+●​ Scale: 100 students trained over 2 years · 300 SMEs supported with cybersecurity 
+protection 
+●​ Genre: Cybersecurity · Industry Training · SME Protection · National Initiative 
+●​ Status: 🟢 Ongoing 
+THE PLOT 
+Not every internship is a historic first. This one is. Selected for Pakistan's inaugural APAC Cyber 
+Clinic — a competitive, nationally significant programme co-designed by Google.org, The Asia 
+Foundation, and the Global Cyber Alliance to build Pakistan's cybersecurity capacity at the SME 
+level. Training is delivered by industry practitioners — including Mr. Uzair Bashir and Nabeel 
+Ahsan — with genuine field experience. The curriculum covers network security, phishing 
+detection, data protection, digital hygiene for organizations, and practical threat response. 
+Beyond individual skill-building, fellows collaborate to design and deliver cybersecurity training 
+modules for partner institutions. This isn't a certificate course — it's a deployment. 
+TRAINING SCOPE 
+●​ Network Security — perimeter defence, traffic analysis, firewall configuration, and 
+infrastructure hardening 
+●​ Threat Intelligence — identifying, categorizing, and tracking real-world cyber threats and 
+threat actor profiles 
+●​ Phishing Attack Detection — recognizing social engineering vectors; analyzing phishing 
+emails, domains, and credential harvesting 
+●​ Data Protection Practices — encryption standards, secure data handling, access control, 
+and privacy compliance 
+●​ Digital Hygiene for SMEs — practical security posture improvement for businesses with 
+limited IT resources 
+●​ Cybersecurity Training Design — developing modules for students at SMC and partner 
+institutions 
+●​ Scenario-Based Exercises — hands-on workshops simulating incident response and 
+threat mitigation 
+●​ SME Vulnerability Exposure — real-world cybersecurity risk landscapes of Pakistani 
+small-medium enterprises 
+👥 COLLABORATORS: Cohort of 100 students — Pakistan's first APAC Cyber Clinic 
+🎓 MENTORS: Mr. Uzair Bashir, Nabeel Ahsan (InnovAtrium Cybersecurity Practitioners) 
+💡 WHAT I LEARNED: Cybersecurity is not a product you install. It is a culture you build. 
+Watching SME owners understand why their password habits matter — and seeing that shift 
+their behaviour — is more impactful than any technical configuration you could deploy for them. 
+ 
+BONUS EPISODE — FALL 2025 | LEADERSHIP 
+Head of Neural Nova — BTech Fest, BNU 
+Run the room. Set the theme. Build a better tomorrow. This is what AI leadership looks like. 
+●​ Period: 2025 
+●​ Event: BTech Fest — BNU's flagship annual technology hackathon 
+●​ Track: Neural Nova — Premier AI/ML Competition Category 
+●​ Theme: Build A Better Tomorrow 
+●​ Genre: Leadership · AI/ML · Hackathon Direction · Event Management 
+●​ Status: ✅ Completed 
+THE PLOT 
+Appointed Head of Neural Nova — the AI/ML flagship track at BNU's premier hackathon, BTech 
+Fest. The mandate went far beyond logistics: define what AI innovation at BNU looks like in 
+2025. The theme 'Build A Better Tomorrow' was chosen as a deliberate pushback against AI 
+competitions that reward technical sophistication without purpose. The brief was explicit: don't 
+build something impressive — build something that matters. Whether solutions addressed 
+climate change, healthcare access, digital privacy, or everyday community challenges — the 
+standard was impact, not spectacle. 
+KEY RESPONSIBILITIES 
+●​ Track Direction — defined Neural Nova's scope, rules, judging criteria, and thematic 
+vision for 2025 
+●​ Theme Curation — selected and justified 'Build A Better Tomorrow' to elevate social 
+impact AI submissions 
+●​ Participant Management — onboarding, briefings, and Q&A for all AI/ML category 
+participants 
+●​ Judging Framework — evaluation rubric balancing technical execution, innovation, and 
+real-world applicability 
+●​ Mentor Coordination — coordinated with industry mentors and faculty judges 
+●​ Problem Statement Design — crafted challenge prompts across climate, healthcare, 
+privacy, and community domains 
+💡 WHAT I LEARNED: Leadership in a technical context is not about knowing the most. It is 
+about creating the conditions where other people can do their best work — and then holding 
+them to a standard worth meeting. 
+ 
+📺 SEASON 6 — NOW STREAMING ▶ 
+Spring 2026 
+The season currently being written. Production MERN stack at a real AI startup. More episodes 
+dropping. Check back soon. 
+ 
+SPECIAL EPISODE — SPRING 2026 | WORK 
+EXPERIENCE 
+Full-Stack Development Intern @ Osso.ai 
+98% Match 
+Production MERN stack. Real APIs. Real users. No safety net. This is what shipping feels like. 
+●​ Period: Sep 2025 – Nov 2025 (3 months) 
+●​ Organization: Osso.ai — AI-driven solutions platform, Islamabad, Pakistan 
+●​ Type: Internship · Remote 
+●​ Genre: Full-Stack Development · MERN Stack · API Engineering · AI Integration · 
+Production 
+●​ Status: ✅ Completed 
+THE PLOT 
+Three months building real things for real users at a live AI startup. At Osso.ai, the full MERN 
+stack was in play from day one: MongoDB databases, Express.js and Node.js backends, and 
+React frontends, all connected through secure RESTful APIs. Every line of code was 
+production-bound. The scope went beyond front-end: designing database schemas for 
+scalability, engineering authenticated API endpoints, integrating AI components into the 
+application layer, and optimizing backend performance under real load. 
+KEY CONTRIBUTIONS 
+●​ Full-Stack Application Development — designed and deployed scalable MERN stack 
+applications end-to-end 
+●​ RESTful API Engineering — built and maintained secure, JWT-authenticated APIs with 
+proper error handling and rate limiting 
+●​ React Front-End Development — component-based UI architecture with hooks, state 
+management, and responsive design 
+●​ Node.js / Express.js Backend — server architecture with middleware, routing, and 
+request lifecycle management 
+●​ MongoDB Schema Design — document modelling optimized for query performance and 
+horizontal scalability 
+●​ AI/ML Integration — embedded intelligent, data-driven features via AI model API 
+connections 
+●​ Backend Optimization — database indexing, query optimization, and caching strategies 
+for improved throughput 
+●​ Code Quality & Version Control — code reviews, documentation, production-grade Git 
+workflows 
+TECH STACK: MongoDB · Express.js · React · Node.js (MERN Stack) · RESTful API Design · 
+JWT Authentication · Git · GitHub · AI/ML API Integration 
+💡 WHAT I LEARNED: Production is humbling. A bug in a university project gets a comment 
+from a professor. A bug in production gets a message from a user. The feedback loop is faster, 
+more honest, and infinitely more motivating. Ship carefully. Ship often. Fix fast. 
+⏳ Season 6 episodes currently in development. More projects dropping Spring 2026. Watch 
+this space. 
+ 
+🏆 AWARDS & RECOGNITION 
+The Trophies Wall — Every badge, every honour, with full context. 
+ 
+🏆 AI INNOVATION DISTINCTION AWARD 
+Recognized by an industry leader for outstanding contribution to Artificial Intelligence. 
+●​ Event: Annual Project Showcase 2025 — Beaconhouse National University 
+●​ Presented By: Usman Asif, CEO — Devsinc 
+●​ Date: May 2025 
+Received for the Grantify project — an automated grant monitoring system that leveraged web 
+scraping and AI automation to solve a real problem for BNU's research office. Presented by the 
+CEO of one of Pakistan's leading software companies. Recognition from an industry CEO at a 
+university showcase signals that the work had value beyond the academic context. 
+ 
+🏆 BEST PROJECT AWARD — AI CATEGORY 
+Grantify wins the AI category at BNU's Project Display 2025. 
+●​ Event: BNU Project Display 2025 
+●​ Project: Grantify — Automated Research Grant Monitoring System 
+●​ Date: Spring 2025 
+Awarded Best Project in the AI Category at BNU's 2025 Project Display, competing against the 
+full cohort of AI/ML submissions. Recognized for technical execution, genuine utility for a real 
+client, and measurable impact on administrative workflows. 
+ 
+🏆 AWARD OF EXCELLENCE — BNU CONNECT 2025 
+Excellence in interdisciplinary collaboration. AfterLight brings CS and Visual Arts together. 
+●​ Event: BNU Connect 2025 
+●​ Project: AfterLight — Narrative Browser-Based Game 
+●​ Date: Summer 2025 
+Presented for AfterLight — developed in collaboration between BNU's SCIT and SVAD schools. 
+Recognized for outstanding integration of computer science and visual arts disciplines, 
+producing an experience neither could have created independently. 
+ 
+🏆 DANDELIONS — THE DOUBLE WINNER 
+Two awards. One semester. The only project in cohort history to win both simultaneously. 
+●​ Awards: Best Team Project (Web Development) · Best Team Project (Programming) 
+●​ Presented By: Ayub Ghauri — NETSOL Technologies 
+●​ Date: June 2024 
+Swept two categories at the 2024 BNU Project Showcase. Winning both is notable because 
+they evaluate different dimensions: front-end quality and UX vs. code logic and structure. 
+Dandelions excelled on both simultaneously. 
+ 
+📚 DEAN'S HONOR LIST — ONGOING SERIES 
+Consistent top-tier academic performance. Every semester without exception. 
+●​ Period: Feb 2024 – Present (every semester) 
+●​ Issuer: Dr. Shafaat Bazaaz — Beaconhouse National University 
+●​ Also: Merit Scholarship — maintained throughout the full undergraduate degree 
+Earned every semester since starting the CS programme, alongside the Merit Scholarship. 
+Consistent performance across every course while simultaneously running internships, projects, 
+a published IEEE paper, and leadership roles. Current CGPA: 3.79. 
+ 
+🎖️ AI RESEARCHER — CENTRE OF AI RESEARCH (CAIR), BNU 
+●​ Organization: Centre of AI Research (CAIR), Beaconhouse National University 
+●​ Date: 2025 
+Formally designated as an AI Researcher within BNU's Centre of AI Research — institutional 
+recognition of applied research contributions during the third year. Reflects the IEEE publication 
+and applied research in the CNN deepfake detection pipeline and AzureIQ-RAG. 
+ 
+🎓 CAMPUS AMBASSADOR — VICE CHANCELLOR'S OFFICE 
+●​ Appointed By: Vice Chancellor Moeed Yusuf — Beaconhouse National University 
+●​ Date: Fall 2024 
+Selected as an official BNU Campus Ambassador — formal liaison between student body and 
+university administration, appointed by the Vice Chancellor. One of a small cohort selected 
+university-wide. 
+ 
+🏅 ACADEMIC HIGH ACHIEVER — BAHRIA TOWN COLLEGE 
+●​ Issuer: Bahria Town College, Lahore 
+●​ Date: 2023 
+Graduated with Academic High Achiever distinction — exceptional pre-university performance 
+that preceded entry into BNU's Computer Science programme. The foundation for everything 
+that followed. 
+ 
+📜 CERTIFICATIONS 
+Docuseries & Specializations — The continuing education catalogue. 
+ 
+▶ GOOGLE MACHINE LEARNING CRASH COURSE 
+A deep dive into the architecture of modern AI. Eleven badges. One obsession. 
+●​ Issuer: Google Developers Group 
+●​ Completed: July 2025 
+●​ Format: Standalone Intensive — 11 Distinct Learning Badges 
+BADGES EARNED: 
+1.​ Introduction to Machine Learning — supervised learning fundamentals, model 
+evaluation, bias-variance tradeoff 
+2.​ Problem Framing — translating real-world problems into well-defined ML problem 
+statements 
+3.​ Data Preparation — feature engineering, data cleaning, handling class imbalance and 
+missing data 
+4.​ Logistic Regression — binary and multiclass classification, probability calibration, ROC 
+curves 
+5.​ Neural Networks — architecture design, activation functions, layers, forward propagation 
+6.​ Training Neural Networks — backpropagation, gradient descent variants, learning rate 
+schedules, regularization 
+7.​ ML Fairness — bias identification, fairness metrics, responsible AI principles and 
+evaluation 
+8.​ Decision Forests — random forests, gradient boosted trees, ensemble methods, feature 
+importance 
+9.​ Large Language Models — transformer architecture, tokenization, prompt design, 
+capabilities and limitations 
+10.​Introduction to Generative AI — generative model taxonomy: GANs, diffusion models, 
+VAEs 
+11.​Responsible AI Practices — deployment ethics, model monitoring, harm prevention, AI 
+accountability 
+#MachineLearning #NeuralNetworks #LLMs #GenerativeAI #ResponsibleAI #DeepLearning 
+ 
+▶ GOOGLE IT AUTOMATION WITH PYTHON 
+The complete 6-episode professional specialization on Python automation. 
+●​ Issuer: Google via Coursera 
+●​ Completed: July 2024 
+●​ Format: Professional Certificate Specialization — 6 Courses 
+EPISODE BREAKDOWN: 
+●​ Ep 01: Crash Course on Python (May 2024) — syntax, data types, functions, OOP 
+fundamentals, scripting foundations 
+●​ Ep 02: Using Python to Interact with the OS (Jul 2024) — file system operations, process 
+management, text processing, bash scripting 
+●​ Ep 03: Git and GitHub (Jun 2024) — version control, branching, merging, pull requests, 
+collaborative workflows 
+●​ Ep 04: Troubleshooting and Debugging (Jul 2024) — root cause analysis, systematic 
+debugging, performance profiling 
+●​ Ep 05: Configuration Management and the Cloud (Jul 2024) — infrastructure as code, 
+Puppet, cloud resource management, scaling 
+●​ Ep 06: Automating Real-World Tasks with Python (Jul 2024) — API integration, data 
+pipelines, final capstone project 
+#Python #DevOps #Automation #Git #CloudInfrastructure #Scripting 
+ 
+▶ CS50: INTRODUCTION TO COMPUTER SCIENCE 
+The one that started it all. Harvard's legendary gateway to computer science. 
+●​ Issuer: Harvard University via edX 
+●​ Completed: 2023 
+●​ Format: Standalone Course — Harvard CS50 
+Completed Harvard's globally acclaimed CS introduction — covering algorithms, data 
+structures, memory management, and problem-solving across C, Python, SQL, and web 
+development. The first encounter with pointers, hash tables, and computational complexity. The 
+course that confirmed computer science was the right path. 
+#CS50 #Harvard #Algorithms #C #Python #SQL #DataStructures 
+ WORK EXPERIENCES 
+ 
+Cybersecurity Trainee InnovAtrium · Contract · On-site Nov 2025 – Present · 6 months 
+Lahore, Punjab, Pakistan 
+Selected as part of Pakistan's first APAC Cyber Clinic cohort — a programme co-designed with 
+Google.org, The Asia Foundation, and the Global Cyber Alliance to train 100 students and 
+support 300 SMEs with cybersecurity protection. Receiving hands-on training in network 
+security, threat intelligence, phishing detection, and security operations under expert industry 
+mentorship. Collaborating with cohort fellows to develop and deliver cybersecurity awareness 
+modules for partner institutions across Pakistan. 
+ 
+Full-Stack Development Intern Osso.ai · Internship · Remote Sep 2025 – Nov 2025 · 3 
+months Islamabad, Pakistan 
+Built and deployed scalable full-stack web applications using the MERN stack (MongoDB, 
+Express.js, React, Node.js) in a production environment. Engineered and maintained secure 
+RESTful APIs with JWT authentication. Integrated AI/ML components into web architecture and 
+optimized database schemas and backend performance for scalability and throughput. 
+ 
+Research & Outreach Analyst Digital Ocean WET Program · Part-Time · Field + Office Apr 
+2025 – Present Lahore, Punjab, Pakistan 
+Collected and analyzed qualitative and quantitative data at regional training sites across Punjab 
+— including University of Okara and FCCU Lahore — to evaluate digital transformation 
+programme effectiveness for women entrepreneurs. Conducted 50+ stakeholder interviews, 
+delivered impact assessment reports to program leadership, and proposed data-backed 
+curriculum improvements. 
+ 
+Teaching Assistant — AI Lab, ICT Lab, Programming Fundamentals Lab & Applied 
+Physics Lab Beaconhouse National University · Part-Time · On-site Oct 2024 – Present 
+Lahore, Punjab, Pakistan 
+Served as Teaching Assistant across four labs and courses over multiple semesters — Applied 
+Physics Lab (Oct 2024 – Jan 2025), ICT Lab, Programming Fundamentals Lab, and AI Lab 
+(ongoing). Facilitated weekly lab sessions, guided students through practicals and coding 
+exercises, graded 100+ reports and assignments per semester with written feedback, and held 
+supplementary support sessions for students needing additional help. 
+ 
+Software Development Intern Sense.ai · Internship · On-site Jun 2024 – Aug 2024 · 2 months 
+Lahore, Punjab, Pakistan 
+Designed and built the company's official website from scratch — wireframes through to live 
+deployment. Developed responsive front-end UIs in HTML5, CSS3, and JavaScript. Achieved a 
+15% reduction in page load time through performance optimization and drove a 20% increase in 
+user engagement through UX improvements post-launch. 
+​
+ 
+⚙️ SKILLS MATRIX 
+The Full Tech Stack — By domain, with no filler. 
+ 
+▶ CYBERSECURITY 
+●​ Network Security — perimeter defence, traffic analysis, firewall configuration, 
+infrastructure hardening 
+●​ Web Application Security — OWASP Top 10 awareness, injection vulnerabilities, 
+authentication flaws 
+●​ Digital Forensics — AI-generated image detection, generative artifact analysis, forensic 
+pipeline design 
+●​ Vulnerability Assessment — SME security posture evaluation, risk identification and 
+prioritization 
+●​ Threat Intelligence — threat actor profiling, phishing vector analysis, incident response 
+principles 
+●​ OSINT — open-source intelligence gathering techniques for reconnaissance 
+●​ Phishing Detection — recognizing social engineering attacks; email and domain analysis 
+●​ Cybersecurity Training — developing and delivering security awareness curriculum to 
+students and SMEs 
+ 
+▶ ARTIFICIAL INTELLIGENCE & MACHINE LEARNING 
+●​ Deep Learning — TensorFlow, Keras: model architecture design, training pipelines, 
+evaluation, deployment 
+●​ Computer Vision — CNN design, Transfer Learning (Xception, MobileNetV2, 
+EfficientNet), image classification 
+●​ Explainable AI — Grad-CAM, activation visualization, model interpretability for forensic 
+and production use 
+●​ NLP — tokenization, intent recognition, named entity extraction, text classification, 
+sequence modelling 
+●​ LLM Integration — prompt engineering, context window management, multi-turn 
+conversation handling 
+●​ Retrieval-Augmented Generation (RAG) — full pipeline: ingest → chunk → embed → 
+retrieve → generate 
+●​ Classical ML — Scikit-learn: regression, classification, clustering, cross-validation, 
+feature engineering 
+●​ Data Science — Pandas, NumPy, Matplotlib, Seaborn: EDA, data cleaning, statistical 
+analysis, visualization 
+●​ HuggingFace — Transformers library, model fine-tuning, inference pipelines, embedding 
+models 
+●​ Azure AI — Azure Cognitive Search, Azure OpenAI, cloud-scale RAG architecture (from 
+IEEE paper) 
+ 
+▶ FULL-STACK WEB DEVELOPMENT 
+●​ React — component architecture, hooks (useState/useEffect/useContext/useReducer), 
+React Router, state management 
+●​ Node.js & Express.js — server architecture, middleware, routing, JWT authentication, 
+REST API lifecycle 
+●​ MongoDB — document modelling, aggregation pipeline, indexing strategy, Mongoose 
+ODM 
+●​ MySQL — schema design, full normalization (3NF), stored procedures, complex queries, 
+ERD 
+●​ RESTful API Design — endpoint architecture, authentication, rate limiting, versioning, 
+error handling 
+●​ HTML5 & CSS3 — semantic markup, Flexbox, Grid, animations, pseudo-elements, 
+responsive design 
+●​ Bootstrap 5 — grid system, component library, utility-first responsive design 
+●​ JavaScript (ES6+) — async/await, Promises, fetch API, DOM manipulation, event-driven 
+architecture 
+ 
+▶ MOBILE DEVELOPMENT 
+●​ Flutter — widget tree architecture, stateful/stateless widgets, navigation, Provider/Bloc 
+state management 
+●​ Dart — language fundamentals, async/await, streams, null safety, OOP in mobile context 
+●​ Mobile UI/UX — platform design guidelines (Material Design), accessibility, adaptive 
+layouts 
+ 
+▶ PROGRAMMING LANGUAGES 
+●​ Python — primary AI/ML, automation, scripting, web scraping, data engineering, 
+research 
+●​ C++ — OOP principles, data structures, algorithms, game logic, system-level application 
+design 
+●​ JavaScript (ES6+) — full-stack web: React front-end and Node.js back-end 
+●​ SQL — relational design, normalization, complex joins, subqueries, stored procedures 
+●​ Dart — Flutter mobile development 
+ 
+▶ TOOLS, DEVOPS & WORKFLOW 
+●​ Git & GitHub — version control, branching strategy, pull requests, code review, conflict 
+resolution 
+●​ Beautiful Soup & Requests — web scraping, HTML parsing, automated data extraction 
+pipelines 
+●​ Schedule / Cron — task automation and pipeline management in Python 
+●​ smtplib / Email Automation — notification system engineering in Python 
+●​ REST API Consumption — authenticated API integration, OAuth, API key management 
+●​ VS Code, PyCharm, IntelliJ — primary development environments 
+●​ Postman — API testing and documentation 
+ 
+▶ SOFT SKILLS & PROFESSIONAL 
+●​ Technical Writing — IEEE-standard research paper authored and peer-review accepted 
+●​ Client Communication — requirements gathering and stakeholder management 
+(Skinsations, ORIP, Sense.ai, Digital Ocean WET) 
+●​ Cross-Disciplinary Collaboration — CS × Arts (AfterLight), CS × Research (Grantify), CS 
+× Field Work (WET Program) 
+●​ Presentation — Project Display pitches, industry award presentations, hackathon track 
+direction 
+●​ Leadership — Head of Neural Nova (BTech Fest), Teaching Assistant, Campus 
+Ambassador, Researcher (CAIR) 
+●​ Research Methodology — qualitative interviewing, quantitative survey design, statistical 
+analysis, academic reporting 
+ 
+📬 READY TO COLLABORATE? 
+Available for internships · Cybersecurity · Software Engineering · AI/ML Research · Full-Stack 
+Development 
+📧 menahilfatimakhan.mfk@gmail.com 📞 0321-4258890 🔗 
+linkedin.com/in/menahil-fatima-k2004 📄 One-page CV available on request 
+ 
+© MENAHIL FATIMA ORIGINALS · ALL RIGHTS RESERVED · LAHORE, PAKISTAN · 2026 
+ 
