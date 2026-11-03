@@ -1,5 +1,5 @@
 import fitz
-doc = fitz.open("Portfolio Website.pdf")
+doc = fitz.open("portfolio-website.pdf")
 text = ""
 for page in doc:
     text += page.get_text()

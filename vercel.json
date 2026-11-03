@@ -1,3 +1,10 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/public/menahil-cv.pdf",
+      "destination": "/assets/cv/menahil-cv.pdf",
+      "permanent": true
+    }
+  ]
 }
