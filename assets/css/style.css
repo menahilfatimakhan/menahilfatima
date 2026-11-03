@@ -40,8 +40,8 @@
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-  --gutter: clamp(16px, 4vw, 56px);
-  --maxw: 1240px;
+  --gutter: clamp(18px, 6.5vw, 112px);
+  --maxw: 1200px;
   --nav-h: 76px;
   --r-lg: 24px;
   --r-md: 16px;
@@ -3492,26 +3492,79 @@ a.kicker:hover .ic {
   margin-top: clamp(3rem, 7vw, 5rem);
 }
 
+.certs-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.4rem;
+}
+
+.certs-head .sub-title {
+  margin-bottom: 0;
+}
+
+.certs-head p {
+  color: var(--muted);
+}
+
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 16px;
 }
 
 .cert {
-  padding: 1.5rem;
-  min-height: 170px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.5s var(--ease-out);
+  overflow: hidden;
+  transition: transform 0.5s var(--ease-out), border-color 0.4s;
 }
 
 .cert:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  border-color: var(--line-2);
+}
+
+.cert-emblem {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.cert-emblem::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(8, 8, 16, 0.6));
+  pointer-events: none;
+}
+
+.cert-emblem svg.scene {
+  transition: transform 0.8s var(--ease-out);
+}
+
+.cert:hover .cert-emblem svg.scene {
+  transform: scale(1.06);
+}
+
+.cert-body {
+  padding: 1.3rem 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cert-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
 }
 
 .cert-year {
-  align-self: flex-start;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
@@ -3519,20 +3572,51 @@ a.kicker:hover .ic {
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
   border: 1px solid rgba(56, 189, 248, 0.3);
-  margin-bottom: auto;
+}
+
+.cert-done {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #86efac;
+}
+
+.cert-done .ic {
+  width: 0.95em;
+  height: 0.95em;
+  stroke-width: 2.4;
 }
 
 .cert h4 {
-  margin-top: 1.4rem;
-  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.25;
 }
 
-.cert p {
-  margin-top: 0.3rem;
+.cert-issuer {
+  margin: 0.3rem 0 1rem;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+}
+
+.cert .chips {
+  margin-top: auto;
+}
+
+.cert .chips span {
+  font-size: 0.72rem;
+  padding: 0.25rem 0.6rem;
+}
+
+@media (max-width: 1100px) and (min-width: 681px) {
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ======================== SKILLS ======================== */
@@ -4533,6 +4617,28 @@ svg.scene {
 @keyframes sc-flashring { 0%, 65% { opacity: 0; transform: scale(1); } 66% { opacity: 1; transform: scale(1); } 90%, 100% { opacity: 0; transform: scale(5); } }
 .sc-burst { opacity: 0; animation: sc-burst 6s ease-out infinite; }
 @keyframes sc-burst { 0%, 65% { opacity: 0; transform: translate(0, 0); } 67% { opacity: 1; } 92%, 100% { opacity: 0; transform: translate(var(--dx), var(--dy)); } }
+
+/* Certification emblems */
+.sc-gd { animation: sc-gd 3.2s ease-in-out infinite; }
+@keyframes sc-gd {
+  0% { transform: translate(26px, 70px); opacity: 0; }
+  6% { opacity: 1; }
+  25% { transform: translate(58px, 94px); }
+  45% { transform: translate(80px, 142px); }
+  58% { transform: translate(97px, 165px); }
+  63% { transform: translate(104px, 164px); }
+  68%, 92% { transform: translate(100px, 166px); opacity: 1; }
+  100% { transform: translate(100px, 166px); opacity: 0; }
+}
+
+.sc-belt { animation: sc-belt 6s linear infinite; }
+@keyframes sc-belt { from { transform: translateX(-20px); } to { transform: translateX(220px); } }
+
+.sc-beltmark { animation: sc-beltmark .7s linear infinite; }
+@keyframes sc-beltmark { from { transform: translateX(0); } to { transform: translateX(26px); } }
+
+.sc-bolt { opacity: 0; animation: sc-bolt 4s linear infinite; }
+@keyframes sc-bolt { 0%, 68%, 76%, 100% { opacity: 0; } 70%, 74% { opacity: 1; } 72% { opacity: .3; } }
 
 .sc-mag { transform: translate(58px, 62px); }
 

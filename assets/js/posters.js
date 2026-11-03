@@ -693,6 +693,60 @@ window.POSTERS = (function () {
       <text x="100" y="152" text-anchor="middle" ${MONO} font-size="5.5" fill="#94a3b8">EVENT MODE</text>`;
   };
 
+  /* ======================== CERTIFICATION EMBLEMS ========================
+     Drawn for the landscape 'thumb' framing (focus on y 50 to 190). */
+
+  /* UNITAR · Women's Leadership in Disaster Risk Reduction: a dome shields the globe from the storm */
+  S['cert-unitar'] = (u, r) => {
+    let rain = '';
+    for (let i = 0; i < 26; i++) {
+      rain += `<g transform="translate(${f(r() * 200)} 0)"><line x1="0" y1="0" x2="-3" y2="9" stroke="#7dd3fc" stroke-opacity=".6" stroke-width="1" class="a-fall" style="--dur:${f(0.9 + r() * 0.7)}s;animation-delay:-${f(r() * 2)}s;--fy0:30px;--fy1:200px;--rot:0deg"/></g>`;
+    }
+    return bg(u, '#071a2b', '#030a12', '#2dd4bf') + stars(r, 14, 50, 110) +
+      `<defs><clipPath id="${u}out"><path fill-rule="evenodd" clip-rule="evenodd" d="M-50 40 H250 V200 H-50 Z M44 150 A56 56 0 0 1 156 150 V200 H44 Z"/></clipPath></defs>
+      <g fill="#1e293b" opacity=".9"><ellipse cx="62" cy="62" rx="26" ry="9"/><ellipse cx="82" cy="58" rx="20" ry="10"/><ellipse cx="140" cy="60" rx="28" ry="9"/><ellipse cx="160" cy="56" rx="18" ry="9"/></g>
+      <path d="M150 64 l-6 12 h6 l-5 12" stroke="#fde68a" stroke-width="1.8" fill="none" stroke-linejoin="round" class="sc-bolt"/>
+      <g clip-path="url(#${u}out)">${rain}</g>
+      ${glow(u, 100, 150, 60, 'a-pulse', '--dur:4s;--lo:.4')}
+      <path d="M44 150 A56 56 0 0 1 156 150" fill="#2dd4bf" fill-opacity=".07" stroke="#5eead4" stroke-width="1.6" class="a-pulse" style="--dur:2.6s;--lo:.55"/>
+      <circle cx="100" cy="160" r="30" fill="#0f2f3a" stroke="#5eead4" stroke-opacity=".7"/>
+      <g fill="none" stroke="#5eead4" stroke-opacity=".3"><ellipse cx="100" cy="160" rx="30" ry="9"/><ellipse cx="100" cy="160" rx="12" ry="30"/></g>
+      <path d="M86 148 c6-4 12 2 18 -2 M92 166 c5 3 10 -1 16 2" stroke="#34d399" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      ${sparkle(100, 88, 6, '#fde68a', '--dur:2.4s')}
+      <rect x="-50" y="186" width="300" height="20" fill="#030a12"/>`;
+  };
+
+  /* Google Machine Learning Crash Course: gradient descent finds the minimum */
+  S['cert-mlcc'] = (u, r) =>
+    bg(u, '#0b1030', '#03040d', '#818cf8') + stars(r, 14, 50, 100) +
+    `<defs><linearGradient id="${u}cv" x1="0" x2="1"><stop offset="0" stop-color="#818cf8"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
+    <g stroke="#818cf8" stroke-opacity=".12">${[80, 110, 140, 170].map(y => `<line x1="-50" y1="${y}" x2="250" y2="${y}"/>`).join('')}</g>
+    <path d="M18 76 C58 76 70 172 100 172 C130 172 142 94 182 72" fill="none" stroke="url(#${u}cv)" stroke-width="2.4"/>
+    <path d="M18 76 C58 76 70 172 100 172 C130 172 142 94 182 72 V190 H18 Z" fill="url(#${u}cv)" opacity=".08"/>
+    ${[[34, 80], [52, 98], [68, 126], [82, 154], [94, 168]].map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="1.6" fill="#c4b5fd" class="a-pulse" style="--dur:3.2s;--lo:0;animation-delay:${f(i * 0.25)}s"/>`).join('')}
+    <circle cx="0" cy="0" r="6" fill="#fde68a" class="sc-gd"/>
+    <circle cx="100" cy="172" r="4" fill="none" stroke="#86efac" stroke-width="1.4" vector-effect="non-scaling-stroke" class="a-ripple" style="--dur:3.2s;--s:3;animation-delay:1.95s"/>
+    <text x="160" y="160" ${MONO} font-size="7" fill="#c4b5fd" opacity=".85">loss ↓</text>
+    <text x="100" y="186" text-anchor="middle" ${MONO} font-size="6.5" fill="#86efac" opacity=".85">minimum found</text>`;
+
+  /* Google IT Automation with Python: files go in, checked files come out */
+  S['cert-itauto'] = (u, r) => {
+    const doc = (fill, mark) => `<rect x="-7" y="-9" width="14" height="18" rx="2" fill="${fill}"/><path d="M-4 -4 h8 M-4 0 h8 M-4 4 h5" stroke="#0f172a" stroke-opacity=".35" stroke-width="1"/>${mark}`;
+    const docs = (clip, fill, mark) => `<g clip-path="url(#${u}${clip})">${[0, 1, 2, 3].map(i =>
+      `<g transform="translate(0 150)"><g class="sc-belt" style="animation-delay:-${i * 1.5}s">${doc(fill, mark)}</g></g>`).join('')}</g>`;
+    return bg(u, '#0a1a14', '#030806', '#34d399') + stars(r, 12, 50, 90) +
+      `<defs><clipPath id="${u}in"><rect x="-50" y="100" width="146" height="90"/></clipPath><clipPath id="${u}out"><rect x="104" y="100" width="146" height="90"/></clipPath></defs>
+      <rect x="22" y="58" width="96" height="34" rx="6" fill="#04120c" stroke="#34d399" stroke-opacity=".5"/>
+      <text x="30" y="72" ${MONO} font-size="7" fill="#34d399" class="sc-type" style="animation-delay:0s">$ python3 automate.py</text>
+      <text x="30" y="84" ${MONO} font-size="7" fill="#86efac" class="sc-type" style="animation-delay:.8s">✓ 128 files sorted</text>
+      <rect x="-50" y="160" width="300" height="5" rx="2.5" fill="#134e4a"/>
+      <g stroke="#34d399" stroke-opacity=".35" class="sc-beltmark">${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => `<line x1="${i * 26 - 26}" y1="160" x2="${i * 26 - 18}" y2="165"/>`).join('')}</g>
+      ${docs('in', '#e2e8f0', '')}
+      ${docs('out', '#86efac', '<path d="M-3 6 l2 2 l4 -4" stroke="#065f46" stroke-width="1.6" fill="none"/>')}
+      <g class="a-spin" style="--dur:4s"><path d="${gear(100, 132, 22, 10)}" fill="#10b981"/></g><circle cx="100" cy="132" r="7" fill="#0a1a14"/>
+      <text x="100" y="186" text-anchor="middle" ${MONO} font-size="6.5" fill="#86efac" opacity=".85">automated</text>`;
+  };
+
   let uid = 0;
   return {
     has: id => Boolean(S[id]),
@@ -704,7 +758,7 @@ window.POSTERS = (function () {
     render(id, mode = 'tall') {
       if (!S[id]) return '';
       const u = `p${id.slice(0, 3)}${uid++}`;
-      const view = { tall: '0 0 200 300', thumb: '0 50 200 140', wide: '-230 0 460 300' }[mode] || '0 0 200 300';
+      const view = { tall: '0 0 200 300', thumb: '0 50 200 140', emblem: '-25 48 250 141', wide: '-230 0 460 300' }[mode] || '0 0 200 300';
       return `<svg class="scene scene--${mode}" viewBox="${view}" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">${S[id](u, rng(id))}</svg>`;
     }
   };

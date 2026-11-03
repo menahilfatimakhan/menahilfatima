@@ -863,6 +863,11 @@
   function init() {
     renderFeatured();
     renderSeasons();
+    // Small animated emblems (e.g. certifications) declared in the HTML
+    $$('[data-poster]').forEach(el => {
+      el.innerHTML = window.POSTERS ? window.POSTERS.render(el.dataset.poster, 'emblem') : '';
+      watchScenes(el);
+    });
     initReveals();
     $('#year').textContent = new Date().getFullYear();
 
