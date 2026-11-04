@@ -37,7 +37,7 @@ window.POSTERS = (function () {
     for (let i = 0; i < n; i++) {
       s += `<circle cx="${f(r() * 200)}" cy="${f(y0 + r() * (y1 - y0))}" r="${f(0.35 + r() * 0.9)}" fill="${color}" class="a-pulse" style="--dur:${f(2 + r() * 4)}s;animation-delay:-${f(r() * 5)}s"/>`;
     }
-    return `<g opacity=".8">${s}</g>`;
+    return `<g class="st" opacity=".8">${s}</g>`;
   }
 
   const glow = (u, cx, cy, rad, cls = 'a-throb', style = '--dur:5s') =>
@@ -62,155 +62,96 @@ window.POSTERS = (function () {
 
   const S = {};
 
-  /* ---------- S1 · Arcelia: hotel tower at night ---------- */
+  /* ---------- S1 · Arcelia: a lone hotel tower under a crescent moon ---------- */
   S.arcelia = (u, r) => {
     let win = '';
-    for (let row = 0; row < 11; row++) {
-      for (let col = 0; col < 4; col++) {
-        win += `<rect x="${76 + col * 13}" y="${80 + row * 14}" width="8" height="7" rx="1" fill="#fbbf24" class="a-win" style="--dur:${f(5 + r() * 6)}s;animation-delay:-${f(r() * 8)}s"/>`;
-      }
+    for (let row = 0; row < 6; row++) for (let col = 0; col < 3; col++) {
+      win += `<rect x="${87 + col * 10}" y="${92 + row * 13}" width="6" height="6" rx="1" fill="#fbbf24" class="a-win" style="--dur:${f(10 + r() * 8)}s;animation-delay:-${f(r() * 12)}s"/>`;
     }
-    let side = '';
-    for (let i = 0; i < 14; i++) {
-      const left = i < 7;
-      side += `<rect x="${f((left ? 28 : 144) + (i % 3) * 11)}" y="${f((left ? 136 : 116) + Math.floor((i % 7) / 3) * 22 + r() * 4)}" width="6" height="5" fill="#fde68a" opacity="${f(0.25 + r() * 0.6)}"/>`;
-    }
-    return bg(u, '#1b1240', '#05040c', '#fde68a') + stars(r, 26, 0, 140) +
-      glow(u, 152, 54, 42, 'a-throb', '--dur:6s') +
-      `<circle cx="152" cy="54" r="13" fill="#fef3c7"/><circle cx="158" cy="49" r="11.5" fill="#1a1140"/>
-      <rect x="20" y="128" width="46" height="130" fill="#0d0a22"/><rect x="136" y="108" width="46" height="150" fill="#0d0a22"/>${side}
-      <path d="M68 70 L100 44 L132 70 V258 H68Z" fill="#161236" stroke="#7c6ce0" stroke-opacity=".55"/>
-      <line x1="100" y1="44" x2="100" y2="24" stroke="#a5b4fc" stroke-width="1.5"/>
-      <circle cx="100" cy="23" r="2.3" fill="#f43f5e" class="a-pulse" style="--dur:1.4s;--lo:.1"/>
-      ${win}<rect x="-400" y="256" width="1000" height="44" fill="#05040c"/>`;
+    return bg(u, '#1b1240', '#05040c', '#fde68a') + stars(r, 22, 0, 150) +
+      glow(u, 138, 66, 40, 'a-throb', '--dur:8s') +
+      `<circle cx="138" cy="66" r="12" fill="#fef3c7"/><circle cx="144" cy="61" r="10.5" fill="#1a1140"/>
+      <path d="M80 86 L100 68 L120 86 V174 H80 Z" fill="#161236" stroke="#a5b4fc" stroke-opacity=".55"/>
+      <line x1="100" y1="68" x2="100" y2="54" stroke="#a5b4fc" stroke-width="1.4"/>
+      <circle cx="100" cy="53" r="2" fill="#f472b6" class="a-pulse" style="--dur:3s;--lo:.2"/>
+      ${win}<line x1="44" y1="174" x2="156" y2="174" stroke="#a5b4fc" stroke-opacity=".3"/>`;
   };
 
-  /* ---------- S2 · Dandelions: a glass conservatory in bloom ---------- */
+  /* ---------- S2 · Dandelions: a flower under a bell jar ---------- */
   S.dandelions = (u, r) => {
-    const archY = x => f(112 - 62 * Math.sqrt(Math.max(0, 1 - Math.pow((x - 100) / 56, 2))));
-    const mullions = [58, 72, 86, 100, 114, 128, 142].map(x => `<line x1="${x}" y1="176" x2="${x}" y2="${archY(x)}"/>`).join('');
-    const stems = [
-      ['M70 176 C66 152 80 140 72 120', 72, 120, '#f472b6', 0],
-      ['M100 176 C104 148 92 128 100 94', 100, 94, '#fde047', 0.5],
-      ['M130 176 C136 154 122 140 130 116', 130, 116, '#c084fc', 1]
-    ];
-    const plants = stems.map(([d, x, y, col, dl]) => {
-      const petals = [0, 72, 144, 216, 288].map(a => `<ellipse cx="${x}" cy="${y - 6}" rx="3.6" ry="6.5" fill="${col}" transform="rotate(${a} ${x} ${y})"/>`).join('');
-      return `<path d="${d}" stroke="#4ade80" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-dasharray="80" class="a-draw" style="--len:80px;--dur:9s;animation-delay:${dl}s"/>
-        <g class="a-pop" style="--dur:9s;animation-delay:${f(dl + 1.6)}s">${petals}<circle cx="${x}" cy="${y}" r="3" fill="#fef9c3"/></g>`;
-    }).join('');
-    const leaves = [[76, 150, -30], [96, 140, 35], [126, 148, 30], [104, 120, -35]].map(([x, y, a], i) =>
-      `<g class="a-pop" style="--dur:9s;animation-delay:${f(0.8 + i * 0.3)}s"><ellipse cx="${x}" cy="${y}" rx="7" ry="3" fill="#22c55e" transform="rotate(${a} ${x} ${y})"/></g>`).join('');
-    let flies = '';
-    for (let i = 0; i < 8; i++) flies += `<circle cx="${f(16 + r() * 168)}" cy="${f(40 + r() * 170)}" r="1.3" fill="#fde047" class="a-pulse" style="--dur:${f(1.4 + r() * 2)}s;animation-delay:-${f(r() * 3)}s;--lo:.05"/>`;
-    return bg(u, '#04261f', '#020a08', '#a3e635') + stars(r, 16, 0, 80) + glow(u, 100, 126, 74, 'a-pulse', '--dur:5s;--lo:.35') +
-      `<path d="M44 176 V112 A56 62 0 0 1 156 112 V176 Z" fill="#a7f3d0" fill-opacity=".05"/>
-      ${plants}${leaves}
-      <g stroke="#a7f3d0" stroke-opacity=".28" fill="none">${mullions}<line x1="44" y1="140" x2="156" y2="140"/><path d="M44 112 H156"/></g>
-      <path d="M44 176 V112 A56 62 0 0 1 156 112 V176" fill="none" stroke="#a7f3d0" stroke-opacity=".7" stroke-width="1.6"/>
-      <path d="M52 108 A50 56 0 0 1 80 60" stroke="#fff" stroke-opacity=".3" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <line x1="100" y1="50" x2="100" y2="40" stroke="#a7f3d0" stroke-width="1.5"/><circle cx="100" cy="38" r="3" fill="#fde047" class="a-pulse" style="--dur:2s;--lo:.4"/>
-      <rect x="38" y="176" width="124" height="8" rx="2" fill="#14532d"/>
-      <g transform="translate(152 78)"><g class="a-float" style="--fy:-8px;--dur:3.4s">
-        <ellipse cx="-4" cy="0" rx="5" ry="7" fill="#f9a8d4" class="sc-flapL"/><ellipse cx="4" cy="0" rx="5" ry="7" fill="#f472b6" class="sc-flapR"/>
-        <line x1="0" y1="-5" x2="0" y2="6" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/></g></g>
-      ${flies}${sparkle(30, 46, 5, '#d9f99d', '--dur:3s')}`;
+    const ring = (n, rx, ry, off, fill) => Array.from({ length: n }, (_, k) =>
+      `<ellipse cx="100" cy="${116 - off}" rx="${rx}" ry="${ry}" fill="${fill}" transform="rotate(${f(k * 360 / n)} 100 116)"/>`).join('');
+    let rays = '';
+    for (let k = 0; k < 8; k++) rays += `<polygon points="100,116 98,70 102,70" fill="#fef9c3" opacity=".05" transform="rotate(${k * 45} 100 116)"/>`;
+    return bg(u, '#04261f', '#020a08', '#bef264') + stars(r, 18, 0, 150) + glow(u, 100, 116, 60, 'a-throb', '--dur:6s') +
+      `<defs><linearGradient id="${u}pt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbcfe8"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
+      <defs><clipPath id="${u}jar"><path d="M62 168 V124 A38 44 0 0 1 138 124 V168 Z"/></clipPath></defs>
+      <path d="M62 168 V124 A38 44 0 0 1 138 124 V168 Z" fill="#a7f3d0" fill-opacity=".05"/>
+      <g clip-path="url(#${u}jar)"><g class="a-spin" style="--dur:60s">${rays}</g></g>
+      <path d="M100 168 C96 150 104 136 100 122" stroke="#4ade80" stroke-width="2.2" fill="none"/>
+      <ellipse cx="108" cy="150" rx="8" ry="3.2" fill="#22c55e" transform="rotate(-28 108 150)"/>
+      <ellipse cx="92" cy="140" rx="7" ry="3" fill="#16a34a" transform="rotate(30 92 140)"/>
+      <g class="a-spin" style="--dur:60s">${ring(8, 4.6, 10, 10, `url(#${u}pt)`)}</g>
+      <g class="a-spin-r" style="--dur:40s">${ring(6, 3, 6.5, 6, '#fce7f3')}</g>
+      <circle cx="100" cy="116" r="4.5" fill="#fde047"/>
+      ${orbit(100, 134, 26, 7, 9, 0, '<circle r="1.8" fill="#fde047"/>')}${orbit(100, 104, 22, 6, 12, -5, '<circle r="1.5" fill="#fef08a"/>')}
+      <path d="M62 168 V124 A38 44 0 0 1 138 124 V168" fill="none" stroke="#a7f3d0" stroke-opacity=".65" stroke-width="1.5"/>
+      <circle cx="100" cy="79" r="3.6" fill="#a7f3d0" opacity=".6"/>
+      <path d="M70 120 A30 36 0 0 1 86 88" stroke="#fff" stroke-opacity=".28" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <line x1="130" y1="128" x2="130" y2="156" stroke="#fff" stroke-opacity=".12" stroke-width="2" stroke-linecap="round"/>
+      <rect x="56" y="166" width="88" height="3" fill="#b45309"/><rect x="52" y="169" width="96" height="8" rx="3" fill="#3f2a14"/>`;
   };
 
-  /* ---------- S2 · Gaming Hub: CRT with a pong rally ---------- */
+  /* ---------- S2 · Gaming Hub: a glowing pixel creature ---------- */
   S.gaminghub = (u, r) => {
-    const sprite = ['...XXX...', '..XXXXX..', '.XX.X.XX.', '.XXXXXXX.', '.X.X.X.X.'];
+    const sprite = ['..XXXXX..', '.XXXXXXX.', 'XX.XXX.XX', 'XXXXXXXXX', '.X.X.X.X.', 'X.......X'];
     let px = '';
-    sprite.forEach((row, y) => [...row].forEach((c, x) => { if (c === 'X') px += `<rect x="${82 + x * 4}" y="${58 + y * 4}" width="4" height="4"/>`; }));
-    return bg(u, '#140628', '#020104', '#4ade80') + stars(r, 14, 0, 40) +
-      `<defs><pattern id="${u}sl" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".35"/></pattern></defs>
-      <rect x="24" y="46" width="152" height="126" rx="14" fill="#04120a" stroke="#4ade80" stroke-opacity=".55" stroke-width="1.5"/>
-      ${glow(u, 100, 110, 80, 'a-pulse', '--dur:4s;--lo:.4')}
-      <g class="a-float" style="--fy:-3px;--dur:2s" fill="#f472b6">${px}</g>
-      <line x1="100" y1="84" x2="100" y2="164" stroke="#4ade80" stroke-dasharray="4 4" opacity=".4"/>
-      <rect x="34" y="114" width="4" height="22" rx="1" fill="#4ade80" class="sc-padL"/>
-      <rect x="162" y="114" width="4" height="22" rx="1" fill="#4ade80" class="sc-padR"/>
-      <g class="sc-ballx"><rect x="42" y="122" width="5" height="5" fill="#bbf7d0" class="sc-bally"/></g>
-      <rect x="24" y="46" width="152" height="126" rx="14" fill="url(#${u}sl)"/>
-      <text x="100" y="190" text-anchor="middle" ${MONO} font-size="9" fill="#4ade80" class="a-blink" style="--dur:1.6s">INSERT COIN</text>`;
+    sprite.forEach((row, y) => [...row].forEach((c, x) => { if (c === 'X') px += `<rect x="${73 + x * 6}" y="${92 + y * 6}" width="6" height="6"/>`; }));
+    return bg(u, '#140628', '#020104', '#f472b6') + stars(r, 20, 0, 150) + glow(u, 100, 110, 56, 'a-throb', '--dur:6s') +
+      `<rect x="52" y="68" width="96" height="86" rx="16" fill="none" stroke="#4ade80" stroke-opacity=".3"/>
+      <g class="a-float" style="--fy:-5px;--dur:6s" fill="#f472b6">${px}</g>`;
   };
 
-  /* ---------- S2 · sense.ai: a website building itself ---------- */
-  S.senseai = (u, r) => {
-    const blocks = [
-      [36, 71, 30, 5, '#a5b4fc'], [118, 72, 44, 3, '#475569'], [36, 86, 76, 9, `url(#${u}g)`], [36, 100, 60, 5, '#64748b'],
-      [36, 110, 30, 10, '#8b5cf6'], [118, 84, 44, 38, '#312e81'], [36, 134, 38, 26, '#1e1b4b'], [80, 134, 38, 26, '#1e1b4b'], [124, 134, 38, 26, '#1e1b4b']
-    ];
-    const b = blocks.map(([x, y, w, h, fill], i) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h > 12 ? 4 : 2}" fill="${fill}" ${h > 20 ? 'stroke="#6366f1" stroke-opacity=".5"' : ''} class="a-build" style="--dur:7s;animation-delay:${f(i * 0.32)}s"/>`).join('');
-    return bg(u, '#1e1b4b', '#05050f', '#818cf8') + stars(r, 18) + glow(u, 100, 110, 90, 'a-pulse', '--dur:5s;--lo:.4') +
-      `<defs><linearGradient id="${u}g" x1="0" x2="1"><stop offset="0" stop-color="#818cf8"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
-      <rect x="28" y="52" width="144" height="116" rx="9" fill="#0d0d22" stroke="#a5b4fc" stroke-opacity=".35"/>
-      <line x1="28" y1="64" x2="172" y2="64" stroke="#a5b4fc" stroke-opacity=".25"/>
-      <circle cx="36" cy="58" r="2" fill="#f43f5e"/><circle cx="43" cy="58" r="2" fill="#fbbf24"/><circle cx="50" cy="58" r="2" fill="#22c55e"/>
-      ${b}
-      <g transform="translate(140 150)"><g class="sc-cursor"><path d="M0 0 L0 13 L3.5 9.5 L6 15 L8 14 L5.5 8.5 L10 8.5Z" fill="#fff" stroke="#0d0d22" stroke-width=".7"/></g></g>
-      ${sparkle(164, 40, 8, '#e0e7ff', '--dur:2.5s')}${sparkle(40, 186, 5, '#c4b5fd', '--dur:3.2s;animation-delay:-1s')}`;
-  };
+  /* ---------- S2 · sense.ai: a browser with an AI spark ---------- */
+  S.senseai = (u, r) =>
+    bg(u, '#1e1b4b', '#05050f', '#818cf8') + stars(r, 20, 0, 150) + glow(u, 100, 112, 56, 'a-throb', '--dur:7s') +
+    `<rect x="54" y="76" width="92" height="70" rx="9" fill="#0d0d22" stroke="#a5b4fc" stroke-opacity=".6"/>
+    <line x1="54" y1="88" x2="146" y2="88" stroke="#a5b4fc" stroke-opacity=".3"/>
+    <circle cx="62" cy="82" r="1.8" fill="#f43f5e"/><circle cx="68" cy="82" r="1.8" fill="#fbbf24"/><circle cx="74" cy="82" r="1.8" fill="#22c55e"/>
+    <g opacity=".35"><circle cx="100" cy="117" r="9" fill="#818cf8" class="a-pulse" style="--dur:6s;--lo:.15"/></g>
+    <g class="a-throb" style="--dur:6s;--s:1.15"><path d="M100 101 Q103 114 116 117 Q103 120 100 133 Q97 120 84 117 Q97 114 100 101 Z" fill="#e0e7ff"/></g>`;
 
-  /* ---------- S3 · Banking: vault door ---------- */
-  S.banking = (u, r) => {
-    let bolts = '', ticks = '', coins = '';
-    for (let k = 0; k < 10; k++) bolts += `<rect x="97" y="52" width="6" height="9" rx="1.5" fill="#94a3b8" transform="rotate(${k * 36} 100 108)"/>`;
-    for (let k = 0; k < 24; k++) ticks += `<line x1="100" y1="88" x2="100" y2="${k % 3 ? 91 : 93}" stroke="#cbd5e1" stroke-width=".8" transform="rotate(${k * 15} 100 108)"/>`;
-    for (let i = 0; i < 4; i++) coins += `<ellipse cx="154" cy="${184 - i * 6}" rx="14" ry="4" fill="#fbbf24" stroke="#b45309" class="a-pop" style="--dur:5s;animation-delay:${f(i * 0.4)}s"/>`;
-    for (let i = 0; i < 3; i++) coins += `<ellipse cx="44" cy="${186 - i * 6}" rx="12" ry="3.6" fill="#fcd34d" stroke="#b45309" class="a-pop" style="--dur:5s;animation-delay:${f(1.8 + i * 0.4)}s"/>`;
-    return bg(u, '#0b1b30', '#02060c', '#fbbf24') + stars(r, 20) + glow(u, 100, 108, 80, 'a-pulse', '--dur:4s;--lo:.3') +
-      `<circle cx="100" cy="108" r="62" fill="#16233a" stroke="#64748b" stroke-width="3"/>
-      <g class="a-spin" style="--dur:40s">${bolts}</g>
-      <circle cx="100" cy="108" r="48" fill="#1e2d47" stroke="#94a3b8" stroke-width="1.5"/>
-      <g class="sc-dial">
-        <line x1="100" y1="108" x2="100" y2="72" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
-        <line x1="100" y1="108" x2="131" y2="126" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
-        <line x1="100" y1="108" x2="69" y2="126" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="100" cy="72" r="4" fill="#e2e8f0"/><circle cx="131" cy="126" r="4" fill="#e2e8f0"/><circle cx="69" cy="126" r="4" fill="#e2e8f0"/>
-        <circle cx="100" cy="108" r="21" fill="#334155" stroke="#cbd5e1" stroke-width="2"/>${ticks}
-      </g>
-      <circle cx="100" cy="108" r="6" fill="#fbbf24"/>${coins}`;
-  };
+  /* ---------- S3 · Banking System: a bank, its coin and its transactions ---------- */
+  S.banking = (u, r) =>
+    bg(u, '#0b1b30', '#02060c', '#fbbf24') + stars(r, 20, 0, 150) + glow(u, 100, 112, 62, 'a-throb', '--dur:7s') +
+    `<defs><linearGradient id="${u}gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fef3c7"/><stop offset=".5" stop-color="#f59e0b"/><stop offset="1" stop-color="#b45309"/></linearGradient></defs>
+    <path d="M18 153 H90" stroke="#93c5fd" stroke-opacity=".25"/><path d="M110 153 H182" stroke="#93c5fd" stroke-opacity=".25"/>
+    <path d="M18 153 H90" stroke="#fde68a" stroke-width="1.6" stroke-dasharray="3 9" class="a-dash" style="--off:-24px;--dur:2.4s"/>
+    <path d="M110 153 H182" stroke="#93c5fd" stroke-width="1.6" stroke-dasharray="3 9" class="a-dash" style="--off:-24px;--dur:2.4s"/>
+    <polygon points="58,98 100,76 142,98" fill="#0f1d38" stroke="#93c5fd" stroke-width="1.4" stroke-linejoin="round"/>
+    <circle cx="100" cy="90" r="4.5" fill="none" stroke="#fde68a" stroke-width="1.2"/>
+    <rect x="58" y="98" width="84" height="7" fill="#13254a" stroke="#93c5fd" stroke-width="1.2"/>
+    ${[64, 79, 113, 128].map(x => `<rect x="${x}" y="105" width="8" height="38" fill="#13254a" stroke="#93c5fd" stroke-opacity=".7"/>`).join('')}
+    <path d="M93 143 V122 a7 7 0 0 1 14 0 V143 Z" fill="#fde68a" class="a-pulse" style="--dur:4s;--lo:.45"/>
+    <rect x="54" y="143" width="92" height="5" fill="#1e3a8a"/><rect x="50" y="148" width="100" height="5" fill="#172554"/>
+    <g class="sc-coin"><circle cx="100" cy="56" r="11" fill="url(#${u}gd)" stroke="#fde68a"/><circle cx="100" cy="56" r="7.5" fill="none" stroke="#b45309" stroke-opacity=".7"/>
+      <text x="100" y="60" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#78350f">$</text></g>`;
 
-  /* ---------- S3 · Skinsations: database receiving records ---------- */
-  S.skinsations = (u, r) => {
-    let rows = '';
-    for (let i = 0; i < 8; i++) {
-      const side = i % 2 ? 1 : -1;
-      rows += `<g transform="translate(100 72)"><rect x="-10" y="-2.5" width="20" height="5" rx="2.5" fill="${i % 3 ? '#fbcfe8' : '#f0abfc'}" class="sc-in" style="--dx:${f(side * (80 + r() * 30))}px;--dy:${f(-50 + r() * 100)}px;--dur:4s;animation-delay:-${f(i * 0.5)}s"/></g>`;
-    }
-    return bg(u, '#2b0d26', '#07030a', '#f472b6') + stars(r, 22) + glow(u, 100, 110, 80, 'a-pulse', '--dur:4s;--lo:.3') +
-      `<g opacity=".14" stroke="#f9a8d4" fill="none"><rect x="14" y="160" width="38" height="24"/><rect x="150" y="40" width="38" height="24"/><path d="M52 172 H70 M150 52 H134"/></g>
-      <path d="M58 72 V152 A42 12 0 0 0 142 152 V72" fill="#2a0f24" stroke="#f9a8d4" stroke-opacity=".7"/>
-      <path d="M58 99 A42 12 0 0 0 142 99" fill="none" stroke="#f9a8d4" class="a-pulse" style="--dur:2.1s"/>
-      <path d="M58 126 A42 12 0 0 0 142 126" fill="none" stroke="#f9a8d4" class="a-pulse" style="--dur:2.1s;animation-delay:-.7s"/>
-      <path d="M58 152 A42 12 0 0 0 142 152" fill="none" stroke="#f9a8d4" class="a-pulse" style="--dur:2.1s;animation-delay:-1.4s"/>
-      <ellipse cx="100" cy="72" rx="42" ry="12" fill="#3b1533" stroke="#f9a8d4"/>
-      ${rows}
-      <g class="a-throb" style="--s:1.18;--dur:2.4s"><rect x="96" y="65" width="8" height="14" rx="1.5" fill="#fb7185"/><rect x="93" y="68" width="14" height="8" rx="1.5" fill="#fb7185"/></g>`;
-  };
+  /* ---------- S3 · Skinsations: a clinic database ---------- */
+  S.skinsations = (u, r) =>
+    bg(u, '#2b0d26', '#07030a', '#f472b6') + stars(r, 20, 0, 150) + glow(u, 100, 112, 56, 'a-throb', '--dur:7s') +
+    `<path d="M66 86 V138 A34 10 0 0 0 134 138 V86" fill="#2a0f24" stroke="#f9a8d4" stroke-opacity=".7"/>
+    <path d="M66 104 A34 10 0 0 0 134 104" fill="none" stroke="#f9a8d4" class="a-pulse" style="--dur:4s;--lo:.25"/>
+    <path d="M66 121 A34 10 0 0 0 134 121" fill="none" stroke="#f9a8d4" class="a-pulse" style="--dur:4s;--lo:.25;animation-delay:-2s"/>
+    <ellipse cx="100" cy="86" rx="34" ry="10" fill="#3b1533" stroke="#f9a8d4"/>
+    <g class="a-throb" style="--s:1.12;--dur:5s"><rect x="97" y="79" width="6" height="14" rx="1.5" fill="#fb7185"/><rect x="93" y="83" width="14" height="6" rx="1.5" fill="#fb7185"/></g>`;
 
-  /* ---------- S3 · Finnovation: chart + chat ---------- */
-  S.finnovation = (u, r) => {
-    let candles = '', pts = [];
-    for (let i = 0; i < 8; i++) {
-      const x = 38 + i * 18, mid = 160 - i * 8 - r() * 8, h = 12 + r() * 14, up = r() > 0.28;
-      pts.push(`${x},${f(mid)}`);
-      candles += `<g class="a-grow" style="transform-origin:50% 100%;--dur:8s;animation-delay:${f(i * 0.22)}s">
-        <line x1="${x}" y1="${f(mid - h / 2 - 6)}" x2="${x}" y2="${f(mid + h / 2 + 6)}" stroke="${up ? '#34d399' : '#f43f5e'}" stroke-width="1"/>
-        <rect x="${x - 4}" y="${f(mid - h / 2)}" width="8" height="${f(h)}" rx="1" fill="${up ? '#34d399' : '#f43f5e'}"/></g>`;
-    }
-    return bg(u, '#05281c', '#020705', '#34d399') + stars(r, 16) +
-      `<g stroke="#34d399" stroke-opacity=".08">${[90, 115, 140, 165, 190].map(y => `<line x1="20" y1="${y}" x2="180" y2="${y}"/>`).join('')}</g>
-      ${candles}
-      <polyline points="${pts.join(' ')}" fill="none" stroke="#a7f3d0" stroke-width="1.4" stroke-dasharray="200" class="a-draw" style="--len:200px;--dur:8s"/>
-      <rect x="26" y="46" width="64" height="26" rx="11" fill="#0f3d2e" stroke="#34d399" stroke-opacity=".6"/>
-      <path d="M36 72 L32 80 L44 72" fill="#0f3d2e"/>
-      <circle cx="46" cy="59" r="2.8" fill="#a7f3d0" class="sc-typing"/><circle cx="58" cy="59" r="2.8" fill="#a7f3d0" class="sc-typing" style="animation-delay:.18s"/><circle cx="70" cy="59" r="2.8" fill="#a7f3d0" class="sc-typing" style="animation-delay:.36s"/>
-      <g class="a-pop" style="--dur:6s;animation-delay:1s"><rect x="108" y="30" width="66" height="22" rx="10" fill="#34d399"/>
-      <text x="141" y="44.5" text-anchor="middle" ${MONO} font-size="8" font-weight="600" fill="#022c22">grounded ✓</text></g>`;
-  };
+  /* ---------- S3 · Finnovation: a chat bubble with a rising line ---------- */
+  S.finnovation = (u, r) =>
+    bg(u, '#05281c', '#020705', '#34d399') + stars(r, 18, 0, 150) + glow(u, 100, 110, 56, 'a-throb', '--dur:7s') +
+    `<path d="M66 74 H134 a12 12 0 0 1 12 12 V126 a12 12 0 0 1 -12 12 H96 L82 150 V138 H66 a12 12 0 0 1 -12 -12 V86 a12 12 0 0 1 12 -12 Z" fill="#0f3d2e" fill-opacity=".6" stroke="#34d399" stroke-opacity=".7"/>
+    <polyline points="68,124 86,112 100,118 116,98 132,90" fill="none" stroke="#a7f3d0" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="90" class="a-draw" style="--len:90px;--dur:9s"/>
+    <circle cx="132" cy="90" r="3" fill="#34d399" class="a-pulse" style="--dur:4s;--lo:.3"/>`;
 
   /* ---------- S3 · TA: lightbulb with the four labs in orbit ---------- */
   S.ta = (u, r) => {
@@ -226,63 +167,24 @@ window.POSTERS = (function () {
       ${tags}`;
   };
 
-  /* ---------- S4 · Text Editor: 8086 terminal ---------- */
-  S.texteditor = (u, r) => {
-    const lines = ['ORG 100h', 'MOV AH, 0Eh', "MOV AL, 'M'", 'INT 10h', 'CMP AL, 1Bh', 'JNE edit_loop'];
-    const t = lines.map((l, i) => `<text x="34" y="${84 + i * 14}" ${MONO} font-size="8.5" fill="#4ade80" class="sc-type" style="animation-delay:${f(i * 0.7)}s"><tspan fill="#166534">${String(i + 1).padStart(2, '0')}</tspan>  ${l}</text>`).join('');
-    return bg(u, '#03160b', '#000000', '#22c55e') + stars(r, 12, 0, 40) +
-      `<rect x="22" y="48" width="156" height="128" rx="8" fill="#020a05" stroke="#22c55e" stroke-opacity=".5"/>
-      ${glow(u, 100, 112, 90, 'a-pulse', '--dur:3s;--lo:.25')}
-      <text x="32" y="60" ${MONO} font-size="7" fill="#4ade80" opacity=".7">EDIT.ASM</text>
-      <line x1="22" y1="66" x2="178" y2="66" stroke="#22c55e" stroke-opacity=".3"/>
-      ${t}<rect x="34" y="164" width="6" height="9" fill="#4ade80" class="a-blink" style="--dur:1s"/>`;
-  };
+  /* ---------- S4 · Text Editor: a terminal and a cursor ---------- */
+  S.texteditor = (u, r) =>
+    bg(u, '#03160b', '#000000', '#22c55e') + stars(r, 16, 0, 150) + glow(u, 100, 112, 56, 'a-throb', '--dur:7s') +
+    `<rect x="52" y="80" width="96" height="62" rx="8" fill="#020a05" stroke="#22c55e" stroke-opacity=".6"/>
+    <line x1="52" y1="92" x2="148" y2="92" stroke="#22c55e" stroke-opacity=".3"/>
+    <text x="62" y="118" ${MONO} font-size="10" fill="#4ade80">&gt; MOV AX</text>
+    <rect x="114" y="110" width="6" height="10" fill="#4ade80" class="a-blink" style="--dur:2s"/>`;
 
-  /* ---------- S4 · AfterLight: a child-bot projecting memories of the old city ---------- */
-  S.afterlight = (u, r) => {
-    let dust = '';
-    for (let i = 0; i < 14; i++) dust += `<circle cx="${f(10 + r() * 180)}" cy="${f(130 + r() * 70)}" r="${f(0.5 + r())}" fill="#fdba74" class="a-rise" style="--dur:${f(7 + r() * 6)}s;animation-delay:-${f(r() * 10)}s;--dx:${f(15 + r() * 25)}px;--dy:-${f(50 + r() * 50)}px;--rot:0deg"/>`;
-    const holo = [[52, 98, 14, 32], [68, 82, 16, 48], [86, 72, 12, 58], [100, 88, 18, 42], [120, 78, 14, 52], [136, 94, 14, 36]]
-      .map(([x, y, w, h]) => {
-        let wins = '';
-        for (let yy = y + 5; yy < y + h - 4; yy += 7) for (let xx = x + 3; xx < x + w - 3; xx += 5) wins += `<rect x="${xx}" y="${yy}" width="2" height="2.5" fill="#67e8f9" opacity=".55"/>`;
-        return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#67e8f9" fill-opacity=".06" stroke="#67e8f9" stroke-opacity=".8" stroke-width=".8"/>${wins}`;
-      }).join('');
-    const person = (x) => `<circle cx="${x}" cy="124" r="1.6" fill="#a5f3fc"/><path d="M${x} 126 v4 M${x - 1.6} 131 l1.6 -2 1.6 2" stroke="#a5f3fc" stroke-width="1" fill="none" stroke-linecap="round"/>`;
-    return `<defs>
-        <linearGradient id="${u}sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#120a24"/><stop offset=".35" stop-color="#341036"/><stop offset=".55" stop-color="#9a3412"/><stop offset=".62" stop-color="#2a0f12"/><stop offset="1" stop-color="#050203"/></linearGradient>
-        <radialGradient id="${u}sun"><stop offset="0" stop-color="#fef3c7"/><stop offset=".25" stop-color="#fdba74"/><stop offset=".6" stop-color="#f97316" stop-opacity=".45"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></radialGradient>
-        <linearGradient id="${u}bm" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#67e8f9" stop-opacity=".4"/><stop offset="1" stop-color="#67e8f9" stop-opacity=".02"/></linearGradient>
-        <clipPath id="${u}hc"><rect x="48" y="66" width="108" height="68"/></clipPath>
-      </defs>
-      <rect x="-400" width="1000" height="300" fill="url(#${u}sky)"/>${stars(r, 24, 0, 80)}
-      <g class="a-throb" style="--dur:7s;--s:1.06"><circle cx="100" cy="168" r="70" fill="url(#${u}sun)"/></g>
-      <g class="sc-drift"><path d="M-20 160 V142 H-4 V128 L2 122 L8 130 V142 H18 V120 H28 L32 116 V140 H44 V134 H54 V150 H150 V132 H158 V118 L164 112 L168 122 V140 H180 V126 H192 L196 132 V144 H220 V170 H-20Z" fill="#2a1030" opacity=".85"/></g>
-      <polygon points="69,150 50,134 154,134" fill="url(#${u}bm)" class="a-pulse" style="--dur:2.6s;--lo:.5"/>
-      <g class="sc-holo">
-        ${holo}${person(78)}${person(112)}${person(140)}
-        <line x1="48" y1="134" x2="156" y2="134" stroke="#67e8f9" stroke-opacity=".8"/>
-        <g clip-path="url(#${u}hc)"><g class="a-scan" style="--sy:66px;--dur:3.2s"><rect x="48" y="66" width="108" height="2" fill="#a5f3fc" opacity=".8"/></g></g>
-      </g>
-      <path d="M-400 300 V172 H20 L28 158 H92 L98 166 H130 L140 176 H600 V300Z" fill="#0b0507"/>
-      <path d="M150 176 L156 168 L166 170 L172 176Z" fill="#160a0c"/>
-      <g class="a-throb" style="--dur:3s;--s:1.15">
-        <path d="M160 170 C160 164 159 160 160 156" stroke="#4ade80" stroke-width="1.4" fill="none"/>
-        <ellipse cx="156.5" cy="159" rx="3.5" ry="1.6" fill="#4ade80" transform="rotate(-30 156.5 159)"/>
-        <ellipse cx="163" cy="157" rx="3.5" ry="1.6" fill="#86efac" transform="rotate(30 163 157)"/>
-      </g>
-      <g class="a-sway" style="transform-origin:50% 0%;--sw:12deg;--dur:2.8s">
-        <path d="M61 158 v10 M71 158 v10" stroke="#3b4252" stroke-width="3" stroke-linecap="round"/>
-        <ellipse cx="61" cy="169.5" rx="3" ry="1.6" fill="#67e8f9" opacity=".5"/><ellipse cx="71" cy="169.5" rx="3" ry="1.6" fill="#67e8f9" opacity=".5"/>
-      </g>
-      <rect x="57" y="146" width="18" height="13" rx="4" fill="#1f2433" stroke="#67e8f9" stroke-opacity=".6"/>
-      <circle cx="66" cy="152" r="1.6" fill="#f472b6" class="a-pulse" style="--dur:1.6s"/>
-      <g class="a-float" style="--fy:-1.5px;--dur:3s">
-        <rect x="55" y="128" width="22" height="17" rx="6" fill="#1f2433" stroke="#67e8f9"/>
-        <circle cx="69" cy="136" r="3.4" fill="#67e8f9"/><circle cx="69" cy="136" r="6" fill="#67e8f9" opacity=".25" class="a-pulse" style="--dur:2.6s"/>
-        <line x1="62" y1="128" x2="60" y2="121" stroke="#67e8f9"/><circle cx="60" cy="120" r="1.6" fill="#f472b6" class="a-pulse" style="--dur:1.2s"/>
-      </g>${dust}`;
-  };
+  /* ---------- S4 · AfterLight: a small robot and a rising sun ---------- */
+  S.afterlight = (u, r) =>
+    `<defs><linearGradient id="${u}bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140a26"/><stop offset=".5" stop-color="#3b1035"/><stop offset="1" stop-color="#7c2d12"/></linearGradient>
+      <radialGradient id="${u}sun"><stop offset="0" stop-color="#fef3c7"/><stop offset=".45" stop-color="#fb923c"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></radialGradient></defs>
+    <rect x="-400" width="1000" height="300" fill="url(#${u}bg)"/>${stars(r, 20, 0, 110)}
+    <g class="a-throb" style="--dur:10s;--s:1.05"><circle cx="100" cy="150" r="54" fill="url(#${u}sun)"/></g>
+    <rect x="-400" y="150" width="1000" height="150" fill="#0b0507"/>
+    <line x1="-400" y1="150" x2="600" y2="150" stroke="#fdba74" stroke-opacity=".5"/>
+    <g fill="#0b0507"><rect x="94" y="132" width="12" height="10" rx="3"/><rect x="95.5" y="142" width="9" height="8" rx="2"/><line x1="100" y1="132" x2="100" y2="126" stroke="#0b0507" stroke-width="1.5"/></g>
+    <circle cx="102.5" cy="137" r="1.6" fill="#67e8f9" class="a-pulse" style="--dur:4s;--lo:.3"/>`;
 
   /* ---------- S4 · Grantify: radar sweep synced with blips ---------- */
   S.grantify = (u, r) => {
@@ -354,61 +256,24 @@ window.POSTERS = (function () {
       <path d="M89 103 l8 8 l15 -16" stroke="#fecdd3" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
   };
 
-  /* ---------- S5 · Enmawae Studio: a boutique at night ---------- */
+  /* ---------- S5 · Enmawae Studio: an e-commerce cart receiving an order ---------- */
   S.enmawae = (u, r) => {
-    const stripes = Array.from({ length: 7 }, (_, i) => {
-      const x = 30 + i * 20, col = i % 2 ? '#7f1d1d' : '#e5c07b';
-      return `<rect x="${x}" y="62" width="20" height="12" fill="${col}"/><path d="M${x} 74 a10 6 0 0 0 20 0Z" fill="${col}"/>`;
-    }).join('');
-    const cone = (x) => `<polygon points="${x},84 ${x - 20},162 ${x + 20},162" fill="url(#${u}sp)" class="a-pulse" style="--dur:4s;--lo:.6"/>`;
-    return `<defs>
-        <linearGradient id="${u}bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17110a"/><stop offset="1" stop-color="#040302"/></linearGradient>
-        <radialGradient id="${u}gl"><stop offset="0" stop-color="#fbbf24" stop-opacity=".45"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
-        <linearGradient id="${u}sp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a" stop-opacity=".45"/><stop offset="1" stop-color="#fde68a" stop-opacity="0"/></linearGradient>
-        <radialGradient id="${u}wn" cx="50%" cy="10%" r="90%"><stop offset="0" stop-color="#3a2a12"/><stop offset="1" stop-color="#0d0a07"/></radialGradient>
-      </defs>
-      <rect x="-400" width="1000" height="300" fill="url(#${u}bg)"/>${stars(r, 22, 0, 60)}
-      ${glow(u, 100, 120, 80, 'a-pulse', '--dur:5s;--lo:.35')}
-      <rect x="28" y="52" width="144" height="6" fill="#2a1f10"/>
-      <rect x="34" y="58" width="132" height="132" fill="#15100a" stroke="#e5c07b" stroke-opacity=".3"/>
-      <line x1="76" y1="52" x2="78" y2="44" stroke="#e5c07b" stroke-opacity=".6"/><line x1="124" y1="52" x2="122" y2="44" stroke="#e5c07b" stroke-opacity=".6"/>
-      <rect x="60" y="32" width="80" height="14" rx="3" fill="#0b0805" stroke="#e5c07b" stroke-opacity=".8"/>
-      <text x="100" y="42" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="8" letter-spacing="2.6" fill="#fde68a" class="sc-flicker">ENMAWAE</text>
-      ${stripes}
-      <rect x="44" y="84" width="112" height="84" rx="3" fill="url(#${u}wn)" stroke="#e5c07b" stroke-opacity=".6"/>
-      ${cone(70)}${cone(122)}
-      <g class="a-sway" style="transform-origin:50% 100%;--sw:3deg;--dur:6s">
-        <circle cx="70" cy="96" r="3" fill="#e5c07b"/><rect x="68.5" y="98" width="3" height="5" fill="#d6c3a5"/>
-        <path d="M60 106 Q64 102 70 102 Q76 102 80 106 L88 156 H52 Z" fill="#7f1d1d"/>
-        <path d="M62 112 Q70 116 78 112" stroke="#fca5a5" stroke-opacity=".5" fill="none"/>
-        <line x1="70" y1="156" x2="70" y2="162" stroke="#e5c07b"/><ellipse cx="70" cy="163" rx="9" ry="2" fill="#e5c07b"/>
-      </g>
-      <g class="a-sway" style="transform-origin:50% 100%;--sw:3deg;--dur:6s;animation-delay:-3s">
-        <circle cx="122" cy="96" r="3" fill="#e5c07b"/><rect x="120.5" y="98" width="3" height="5" fill="#d6c3a5"/>
-        <path d="M116 103 L122 118 L128 103 Z" fill="#f1f5f9"/>
-        <path d="M108 106 Q114 102 116 103 L122 118 L128 103 Q130 102 136 106 L134 156 H110 Z" fill="#0f172a" stroke="#e5c07b" stroke-opacity=".5"/>
-        <path d="M122 106 L117 103.5 V108.5 Z M122 106 L127 103.5 V108.5 Z" fill="#be123c"/>
-        <circle cx="122" cy="132" r="1.4" fill="#e5c07b"/><circle cx="122" cy="142" r="1.4" fill="#e5c07b"/>
-        <line x1="122" y1="156" x2="122" y2="162" stroke="#e5c07b"/><ellipse cx="122" cy="163" rx="9" ry="2" fill="#e5c07b"/>
-      </g>
-      <g class="a-pop" style="--dur:4s;animation-delay:1.4s"><rect x="126" y="130" width="46" height="10" rx="5" fill="#14532d"/>
-        <text x="149" y="137.3" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="5.5" fill="#86efac">✓ tests pass</text></g>
-      <g class="a-float" style="--fy:-3px;--dur:4s">
-        <rect x="120" y="144" width="62" height="44" rx="7" fill="#fffaf0"/>
-        <rect x="126" y="150" width="16" height="22" rx="2" fill="#7f1d1d"/>
-        <text x="146" y="156" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="6" fill="#1c1917">Gown</text>
-        <text x="146" y="164" font-family="'JetBrains Mono', monospace" font-size="5" fill="#78716c">Rs 24,900</text>
-        <g class="sc-press"><rect x="146" y="170" width="30" height="10" rx="5" fill="#b45309"/>
-        <text x="161" y="177" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="5.5" fill="#fff">Add</text></g>
-      </g>
-      <g transform="translate(176 200)"><g class="sc-click"><path d="M0 0 L0 11 L3 8 L5 12.5 L6.8 11.7 L4.8 7.3 L8.5 7.3Z" fill="#fff" stroke="#1c1917" stroke-width=".6"/></g></g>
-      <g transform="translate(176 22)">
-        <path d="M-9 -4 H-6 L-3 6 H6 L8 -1 H-5" stroke="#e5c07b" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
-        <circle cx="-2" cy="9" r="1.4" fill="#e5c07b"/><circle cx="5" cy="9" r="1.4" fill="#e5c07b"/>
-        <circle cx="8" cy="-6" r="5" fill="#e11d48"/>
-        <text x="8" y="-3.8" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="6" fill="#fff" class="sc-badgeA">1</text>
-        <text x="8" y="-3.8" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="6" fill="#fff" class="sc-badgeB">2</text>
-      </g>`;
+    const s = 9;
+    const box = `<polygon points="${-s},${-s / 2} 0,0 0,${s} ${-s},${s / 2}" fill="#b45309"/>
+      <polygon points="0,0 ${s},${-s / 2} ${s},${s / 2} 0,${s}" fill="#78350f"/>
+      <polygon points="0,${-s} ${s},${-s / 2} 0,0 ${-s},${-s / 2}" fill="#fde68a"/>
+      <path d="M${-s / 2} ${-s * 0.75} L${s / 2} ${-s * 0.25}" stroke="#be123c" stroke-width="1.6"/>`;
+    return bg(u, '#17120a', '#040302', '#e5c07b') + stars(r, 18, 0, 150) + glow(u, 100, 116, 60, 'a-throb', '--dur:7s') +
+      `<g transform="translate(112 112)"><g class="sc-parcel">${box}</g></g>
+      <g stroke="#e5c07b" stroke-opacity=".35">
+        <line x1="92" y1="98" x2="96" y2="136"/><line x1="108" y1="98" x2="109" y2="136"/><line x1="124" y1="98" x2="122" y2="136"/>
+        <line x1="76" y1="117" x2="140" y2="117"/></g>
+      <path d="M52 84 H66 L78 136 H134 L146 98 H70" fill="none" stroke="#e5c07b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="86" cy="148" r="6" fill="#17120a" stroke="#e5c07b" stroke-width="2.4"/><circle cx="126" cy="148" r="6" fill="#17120a" stroke="#e5c07b" stroke-width="2.4"/>
+      <circle cx="148" cy="84" r="8" fill="#e11d48"/>
+      <text x="148" y="87.8" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="9" fill="#fff" class="sc-cartA">1</text>
+      <text x="148" y="87.8" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="9" fill="#fff" class="sc-cartB">2</text>
+      <text x="100" y="172" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="7" letter-spacing="2.4" fill="#e5c07b" opacity=".75">ENMAWAE</text>`;
   };
 
   /* ---------- S5 · AI-Generated Image Detection: scan + Grad-CAM ---------- */
@@ -442,230 +307,97 @@ window.POSTERS = (function () {
     <text x="100" y="182" text-anchor="middle" ${MONO} font-size="10" fill="#bef264" class="sc-swapA">$ whoami</text>
     <text x="100" y="182" text-anchor="middle" ${MONO} font-size="10" fill="#f43f5e" class="sc-swapB"># root</text>`;
 
-  /* ---------- S6 · Umeed-e-Zann: SOS with a 3-second ring ---------- */
+  /* ---------- S6 · Umeed-e-Zann: an SOS button ---------- */
   S.umeed = (u, r) =>
-    bg(u, '#3a0a1f', '#0a0206', '#fb7185') + stars(r, 20) + glow(u, 100, 108, 70) +
-    `<rect x="60" y="40" width="80" height="148" rx="14" fill="#12060c" stroke="#f9a8d4" stroke-opacity=".7"/>
-    <rect x="88" y="45" width="24" height="4" rx="2" fill="#2a0a16"/>
-    <text x="100" y="70" text-anchor="middle" font-size="11" fill="#fda4af" font-family="'Noto Nastaliq Urdu', 'Noto Naskh Arabic', serif" direction="rtl">امیدِ زن</text>
-    ${[0, 0.8, 1.6].map(d => `<circle cx="100" cy="110" r="20" fill="none" stroke="#fb7185" stroke-width="1.5" class="a-ripple" style="--dur:2.4s;--s:2.1;animation-delay:${d}s"/>`).join('')}
-    <circle cx="100" cy="110" r="27" fill="none" stroke="#fecdd3" stroke-opacity=".25" stroke-width="2.5"/>
-    <g transform="rotate(-90 100 110)"><circle cx="100" cy="110" r="27" fill="none" stroke="#fecdd3" stroke-width="2.5" stroke-dasharray="170" stroke-linecap="round" class="sc-count"/></g>
-    <circle cx="100" cy="110" r="20" fill="#e11d48"/>
-    <text x="100" y="114" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="11" fill="#fff">SOS</text>
-    <g fill="#2a0a16" stroke="#f9a8d4" stroke-opacity=".5"><circle cx="78" cy="160" r="9"/><circle cx="100" cy="160" r="9"/><circle cx="122" cy="160" r="9"/></g>
-    <path d="M78 164 c-4-3-6-5-6-7.5 a2.6 2.6 0 0 1 6-1.2 a2.6 2.6 0 0 1 6 1.2 c0 2.5-2 4.5-6 7.5z" fill="#fb7185"/>
-    <path d="M94 157 h12 M100 155 v9 M96 157 l-2 4 h4z M104 157 l-2 4 h4z" stroke="#fda4af" stroke-width="1" fill="none"/>
-    <path d="M122 165 c-3-4-4.5-6-4.5-8 a4.5 4.5 0 0 1 9 0 c0 2-1.5 4-4.5 8z" fill="#fda4af"/><circle cx="122" cy="157" r="1.5" fill="#2a0a16"/>`;
+    bg(u, '#3a0a1f', '#0a0206', '#fb7185') + stars(r, 20, 0, 150) + glow(u, 100, 114, 56, 'a-throb', '--dur:7s') +
+    `<text x="100" y="80" text-anchor="middle" font-size="11" fill="#fda4af" font-family="'Noto Nastaliq Urdu', 'Noto Naskh Arabic', serif" direction="rtl">امیدِ زن</text>
+    ${[0, 2.2].map(d => `<circle cx="100" cy="116" r="22" fill="none" stroke="#fb7185" stroke-width="1.4" vector-effect="non-scaling-stroke" class="a-ripple" style="--dur:4.4s;--s:2;animation-delay:${d}s"/>`).join('')}
+    <circle cx="100" cy="116" r="22" fill="#e11d48"/>
+    <text x="100" y="120.5" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#fff">SOS</text>`;
 
-  /* ---------- S6 · CipherChain: a cryptex that rolls to FLAG!, its cipher halo and the chain ---------- */
+  /* ---------- S6 · CipherChain: a glass block on the chain with a flag inside ---------- */
   S.cipherchain = (u, r) => {
-    const C = { x: 100, y: 104 };
-    // Cryptex: brass caps and five letter rings that roll into place spelling FLAG!
-    const WORD = ['F', 'L', 'A', 'G', '!'];
-    const GLYPHS = 'ABCDEF0123456789XZK';
-    const rings = WORD.map((ch, i) => {
-      const x = f(66 + i * 13.6), land = 9 + (i % 3);
-      let col = '';
-      for (let j = 0; j < 14; j++) col += `<tspan x="${f(+x + 6.5)}" dy="${j ? 11 : 0}">${j === land ? ch : GLYPHS[(r() * GLYPHS.length) | 0]}</tspan>`;
-      return `<rect x="${x}" y="88" width="13" height="32" rx="3" fill="url(#${u}ring)"/>
-        <g clip-path="url(#${u}rc${i})"><text y="108" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="500" font-size="11" fill="#e0e7ff" class="sc-roll" style="--to:-${land * 11}px;animation-delay:${f(i * 0.12)}s">${col}</text></g>
-        <rect x="${x}" y="88" width="13" height="32" rx="3" fill="#fde68a" class="sc-solved"/>
-        <rect x="${x}" y="88" width="13" height="32" rx="3" fill="url(#${u}cyl)"/>`;
-    }).join('');
-    const ringClips = WORD.map((_, i) => `<clipPath id="${u}rc${i}"><rect x="${f(66 + i * 13.6)}" y="88" width="13" height="32" rx="3"/></clipPath>`).join('');
-    const cap = (side) => {
-      const x = side < 0 ? 50 : 134, knob = side < 0 ? 45 : 150;
-      return `<g class="${side < 0 ? 'sc-capL' : 'sc-capR'}">
-        <rect x="${knob}" y="95" width="5" height="18" rx="2" fill="#b45309"/>
-        <rect x="${x}" y="85" width="16" height="38" rx="5" fill="url(#${u}brass)"/>
-        <g stroke="#78350f" stroke-opacity=".55">${[4, 8, 12].map(d => `<line x1="${x + d}" y1="88" x2="${x + d}" y2="120"/>`).join('')}</g>
-        <rect x="${x + 2}" y="87" width="12" height="3" rx="1.5" fill="#fff" opacity=".35"/></g>`;
-    };
-    const cryptex = `${cap(-1)}${cap(1)}
-      <rect x="64" y="86" width="72" height="36" rx="4" fill="#0b0a24"/>
-      ${rings}
-      <line x1="64" y1="104" x2="136" y2="104" stroke="#fde68a" stroke-opacity=".25" stroke-dasharray="1 2"/>
-      <rect x="64" y="86" width="72" height="36" rx="4" fill="none" stroke="#c7d2fe" stroke-opacity=".5"/>`;
-
-    // Cipher halo: hex text running around two counter-rotating rings
-    const hex = n => Array.from({ length: n }, () => (r() * 255 | 0).toString(16).padStart(2, '0')).join(' ');
-
-    // Orbiting blocks, drawn twice: once behind the gem (far side) and once in front (near side)
-    const cube = s => `
-      <polygon points="${-s},${-s / 2} 0,0 0,${s} ${-s},${s / 2}" fill="#4338ca"/>
-      <polygon points="0,0 ${s},${-s / 2} ${s},${s / 2} 0,${s}" fill="#2e2a7a"/>
-      <polygon points="0,${-s} ${s},${-s / 2} 0,0 ${-s},${-s / 2}" fill="#c7d2fe"/>
-      <path d="M0 ${-s} L${s} ${-s / 2} V${s / 2} L0 ${s} L${-s} ${s / 2} V${-s / 2} Z M0 0 V${s} M0 0 L${s} ${-s / 2} M0 0 L${-s} ${-s / 2}" fill="none" stroke="#e0e7ff" stroke-opacity=".55" stroke-width=".5"/>
-      <polygon points="0,${-s} ${s},${-s / 2} 0,0 ${-s},${-s / 2}" fill="#fde68a" class="sc-lit"/>`;
-    const blocks = clip => `<g clip-path="url(#${u}${clip})">${Array.from({ length: 4 }, (_, i) => `
-      <g transform="translate(100 112)"><g class="a-ox" style="--ax:82px;--dur:16s;--ph:${f(-i * 4)}s">
-        <g class="a-oy" style="--ay:24px;--dur:16s;--ph:${f(-i * 4)}s"><g class="sc-depth" style="--dur:16s;--ph:${f(-i * 4)}s">
-          <g style="animation-delay:${f(i * 0.5)}s">${cube(6)}</g>
-        </g></g></g></g>`).join('')}</g>`;
-    const orbitRing = clip => `<g clip-path="url(#${u}${clip})">
-      <ellipse cx="100" cy="112" rx="82" ry="24" fill="none" stroke="#e0e7ff" stroke-opacity=".45" stroke-width=".8" stroke-dasharray="3 7" class="a-dash" style="--off:-20px;--dur:1.4s"/></g>`;
-
-    // Solve moment (every 6s): sparks burst as the cryptex opens
-    let sparks = '';
-    for (let i = 0; i < 8; i++) {
-      const a = (i / 8) * Math.PI * 2 + r() * 0.3, d = 34 + r() * 40;
-      sparks += `<circle cx="${C.x}" cy="${C.y}" r="${f(1 + r() * 1.2)}" fill="${i % 3 ? '#fde68a' : '#e0e7ff'}" class="sc-burst" style="--dx:${f(Math.cos(a) * d)}px;--dy:${f(Math.sin(a) * d)}px"/>`;
-    }
-
-    const hashes = ['keccak256(answer)', '0x9f3c…e21b', '✓ solved'];
-
-    return `<defs>
-        <linearGradient id="${u}bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e0b36"/><stop offset=".55" stop-color="#080622"/><stop offset="1" stop-color="#020208"/></linearGradient>
-        <radialGradient id="${u}gl"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".6"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
-        <radialGradient id="${u}fx"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#e0e7ff" stop-opacity=".8"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
-        <linearGradient id="${u}brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fef3c7"/><stop offset=".35" stop-color="#f59e0b"/><stop offset="1" stop-color="#78350f"/></linearGradient>
-        <linearGradient id="${u}ring" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f46e5"/><stop offset=".5" stop-color="#312e81"/><stop offset="1" stop-color="#14123d"/></linearGradient>
-        <linearGradient id="${u}cyl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".75"/><stop offset=".32" stop-color="#000" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".08"/><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".8"/></linearGradient>
-        <linearGradient id="${u}beam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff7ed" stop-opacity=".95"/><stop offset=".4" stop-color="#fde68a" stop-opacity=".45"/><stop offset="1" stop-color="#fde68a" stop-opacity="0"/></linearGradient>
-        <linearGradient id="${u}fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#818cf8" stop-opacity=".3"/><stop offset="1" stop-color="#818cf8" stop-opacity="0"/></linearGradient>
-        <linearGradient id="${u}pil" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#c4b5fd" stop-opacity=".9"/><stop offset="1" stop-color="#c4b5fd" stop-opacity="0"/></linearGradient>
-        <linearGradient id="${u}ped" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#0f0c2e"/></linearGradient>
-        <path id="${u}r1" d="M100 38 a66 66 0 1 1 0 132 a66 66 0 1 1 0 -132"/>
-        <path id="${u}r2" d="M100 52 a52 52 0 1 0 0 104 a52 52 0 1 0 0 -104"/>
-        ${ringClips}
-        <clipPath id="${u}back"><rect x="-400" y="0" width="1000" height="112"/></clipPath>
-        <clipPath id="${u}front"><rect x="-400" y="112" width="1000" height="200"/></clipPath>
-      </defs>
-      <rect x="-400" width="1000" height="300" fill="url(#${u}bg)"/>
-      ${stars(r, 20, 0, 150)}
-      <rect x="-400" y="157" width="1000" height="1" fill="#a78bfa" opacity=".18"/>
-      ${glow(u, C.x, C.y, 84, 'a-throb', '--dur:4s;--s:1.08')}
-
-      <g class="a-spin" style="--dur:60s;transform-box:view-box;transform-origin:100px 104px">
-        <circle cx="100" cy="104" r="66" fill="none" stroke="#a5b4fc" stroke-opacity=".12"/>
-        <text font-family="'JetBrains Mono', monospace" font-size="6.2" fill="#a5b4fc" opacity=".24" letter-spacing=".4"><textPath href="#${u}r1">${hex(36)}</textPath></text>
-      </g>
-
-      ${orbitRing('back')}${blocks('back')}
-
-      <ellipse cx="100" cy="156" rx="40" ry="8" fill="#1e1b4b" opacity=".8"/>
-      <ellipse cx="100" cy="156" rx="40" ry="8" fill="none" stroke="#c7d2fe" stroke-opacity=".55"/>
-      <ellipse cx="100" cy="156" rx="54" ry="11" fill="none" stroke="#a78bfa" stroke-opacity=".35" stroke-dasharray="4 6" class="a-dash" style="--off:-20px;--dur:2s"/>
-
-      <polygon points="90,104 110,104 124,8 76,8" fill="url(#${u}beam)" class="sc-beam"/>
-      <g class="a-float" style="--fy:-4px;--dur:4s">
-        <rect x="44" y="82" width="112" height="44" rx="10" fill="#8b5cf6" opacity=".18"/>
-        ${cryptex}
-      </g>
-
-      ${orbitRing('front')}${blocks('front')}
-
-      <circle cx="${C.x}" cy="${C.y}" r="34" fill="url(#${u}fx)" class="sc-flash"/>
-      <circle cx="${C.x}" cy="${C.y}" r="12" fill="none" stroke="#fde68a" stroke-width="1.5" vector-effect="non-scaling-stroke" class="sc-flashring"/>
-      ${sparks}
-      <rect x="58" y="176" width="84" height="15" rx="7.5" fill="#0b0a24" stroke="#818cf8" stroke-opacity=".5"/>
-      ${hashes.map((h, i) => `<text x="100" y="186.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="${i === 2 ? '#86efac' : '#c7d2fe'}" class="sc-cyc" style="animation-delay:-${[0, 4, 2][i]}s">${h}</text>`).join('')}`;
+    const mini = (cx, cy, s) => `<g opacity=".7">
+      <polygon points="${cx - s},${cy - s / 2} ${cx},${cy} ${cx},${cy + s} ${cx - s},${cy + s / 2}" fill="#312e81"/>
+      <polygon points="${cx},${cy} ${cx + s},${cy - s / 2} ${cx + s},${cy + s / 2} ${cx},${cy + s}" fill="#1e1b4b"/>
+      <polygon points="${cx},${cy - s} ${cx + s},${cy - s / 2} ${cx},${cy} ${cx - s},${cy - s / 2}" fill="#818cf8"/></g>`;
+    const edges = 'M66 95 L100 78 L134 95 L100 112 Z M66 95 V133 L100 150 L134 133 V95 M100 112 V150';
+    return bg(u, '#0d0b33', '#020208', '#8b5cf6') + stars(r, 20, 0, 150) + glow(u, 100, 114, 64, 'a-throb', '--dur:7s') +
+      `<defs><linearGradient id="${u}fl" x1="0" x2="1"><stop offset="0" stop-color="#e11d48"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>
+      <path d="M50 152 L66 141 M150 82 L134 92" stroke="#c7d2fe" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="4 3" class="a-dash" style="--off:-14px;--dur:2.4s"/>
+      ${mini(40, 158, 12)}${mini(160, 74, 12)}
+      <g class="a-float" style="--fy:-4px;--dur:8s">
+        <path d="M100 78 V116 M100 116 L66 133 M100 116 L134 133" stroke="#a5b4fc" stroke-opacity=".3" stroke-dasharray="2 3"/>
+        <line x1="100" y1="138" x2="100" y2="98" stroke="#fde68a" stroke-width="1.8"/>
+        <circle cx="100" cy="97" r="2" fill="#fef3c7"/>
+        <g class="sc-wave" style="animation-duration:3.4s"><path d="M101 99 C108 96 114 102 122 98 V114 C114 118 108 112 101 115 Z" fill="url(#${u}fl)"/></g>
+        <polygon points="66,95 100,112 100,150 66,133" fill="#6366f1" fill-opacity=".16"/>
+        <polygon points="100,112 134,95 134,133 100,150" fill="#4338ca" fill-opacity=".2"/>
+        <polygon points="100,78 134,95 100,112 66,95" fill="#c7d2fe" fill-opacity=".14"/>
+        <path d="${edges}" fill="none" stroke="#c7d2fe" stroke-opacity=".7" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="${edges}" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="14 260" class="a-dash" style="--off:-274px;--dur:6s"/>
+      </g>`;
   };
 
-  /* ---------- S6 · Head of Neural Nova: signals through a network ---------- */
+  /* ---------- S6 · Head of Neural Nova: a small network ---------- */
   S.neuralnova = (u, r) => {
-    const L = [[40, [78, 104, 130]], [80, [64, 90, 116, 142]], [120, [64, 90, 116, 142]], [160, [90, 118]]];
-    let edges = '', sig = '', nodes = '', rays = '';
+    const L = [[66, [92, 116, 140]], [100, [86, 112, 138]], [134, [100, 126]]];
+    let edges = '', sig = '', nodes = '';
     for (let l = 0; l < L.length - 1; l++) {
       const [x1, ys1] = L[l], [x2, ys2] = L[l + 1];
-      ys1.forEach(y1 => ys2.forEach(y2 => {
-        edges += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#c4b5fd" stroke-opacity=".16" stroke-width=".7"/>`;
-        if (r() > 0.55) {
-          const len = Math.ceil(Math.hypot(x2 - x1, y2 - y1));
-          sig += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#f0abfc" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 ${len + 10}" class="a-dash" style="--off:-${len + 6}px;--dur:2.4s;animation-delay:${f(l * 0.8 - 2.4)}s"/>`;
-        }
-      }));
+      ys1.forEach(y1 => ys2.forEach(y2 => { edges += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#c4b5fd" stroke-opacity=".22" stroke-width=".8"/>`; }));
+      const y1 = ys1[1] || ys1[0], y2 = ys2[0], len = Math.ceil(Math.hypot(x2 - x1, y2 - y1));
+      sig += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#f0abfc" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 ${len + 10}" class="a-dash" style="--off:-${len + 6}px;--dur:4s;animation-delay:${l * 2}s"/>`;
     }
-    L.forEach(([x, ys], l) => ys.forEach(y => {
-      nodes += `<circle cx="${x}" cy="${y}" r="5" fill="#1a0633" stroke="#e9d5ff" stroke-width="1.4"/><circle cx="${x}" cy="${y}" r="2.6" fill="#f0abfc" class="a-pulse" style="--dur:2.4s;--lo:.15;animation-delay:${f(l * 0.8 - 2.4)}s"/>`;
-    }));
-    for (let k = 0; k < 16; k++) rays += `<polygon points="100,104 97,20 103,20" fill="#e9d5ff" opacity=".07" transform="rotate(${k * 22.5} 100 104)"/>`;
-    return bg(u, '#1a0633', '#050110', '#c084fc') + stars(r, 22) + glow(u, 100, 104, 70, 'a-throb', '--dur:3s;--s:1.15') +
-      `<g class="a-spin" style="--dur:50s">${rays}</g>${edges}${sig}${nodes}`;
+    L.forEach(([x, ys]) => ys.forEach(y => { nodes += `<circle cx="${x}" cy="${y}" r="5" fill="#1a0633" stroke="#e9d5ff" stroke-width="1.4"/><circle cx="${x}" cy="${y}" r="2.4" fill="#f0abfc" class="a-pulse" style="--dur:5s;--lo:.3"/>`; }));
+    return bg(u, '#1a0633', '#050110', '#c084fc') + stars(r, 20, 0, 150) + glow(u, 100, 112, 58, 'a-throb', '--dur:7s') + edges + sig + nodes;
   };
 
-  /* ---------- S6 · Cyber Fest CTF: the flag planted on the #1 podium ---------- */
-  S.ctf = (u, r) => {
-    let rain = '';
-    for (let c = 0; c < 8; c++) {
-      let col = '';
-      const glyphs = 'flag{1st}0x7f'.split('');
-      for (let k = 0; k < 7; k++) col += `<tspan x="${f(10 + c * 26)}" dy="12">${glyphs[(r() * glyphs.length) | 0]}</tspan>`;
-      rain += `<text y="0" font-family="'JetBrains Mono', monospace" font-size="8" fill="#fbbf24" opacity=".13" class="a-fall" style="--dur:${f(8 + r() * 6)}s;animation-delay:-${f(r() * 12)}s;--fy0:-90px;--fy1:310px;--rot:0deg">${col}</text>`;
-    }
-    const firework = (cx, cy, col, delay) => {
-      let rays = '';
-      for (let k = 0; k < 12; k++) {
-        const a = (k / 12) * Math.PI * 2, x = f(cx + Math.cos(a) * 17), y = f(cy + Math.sin(a) * 17);
-        rays += `<line x1="${f(cx + Math.cos(a) * 6)}" y1="${f(cy + Math.sin(a) * 6)}" x2="${x}" y2="${y}" stroke="${col}" stroke-width="1.3" stroke-linecap="round"/><circle cx="${x}" cy="${y}" r="1.4" fill="${col}"/>`;
-      }
-      return `<g class="sc-fw" style="animation-delay:${delay}s">${rays}</g>`;
-    };
-    let confetti = '';
-    const C = ['#f43f5e', '#38bdf8', '#fde68a', '#a78bfa', '#34d399', '#fb923c'];
-    for (let i = 0; i < 24; i++) {
-      confetti += `<g transform="translate(${f(r() * 200)} 0)"><rect x="-1.5" y="-3" width="3" height="6" rx=".6" fill="${C[i % 6]}" class="a-fall" style="--dur:${f(4 + r() * 4)}s;animation-delay:-${f(r() * 8)}s;--rot:${f(180 + r() * 540)}deg;--fy0:-20px;--fy1:320px"/></g>`;
-    }
-    const cone = (x, delay) => `<g class="a-sway" style="transform-origin:50% 100%;--sw:16deg;--dur:6s;animation-delay:${delay}s"><polygon points="${x},236 ${x - 30},10 ${x + 30},10" fill="url(#${u}cn)"/></g>`;
-    return `<defs>
-        <linearGradient id="${u}bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c0b33"/><stop offset=".55" stop-color="#0d0618"/><stop offset="1" stop-color="#040208"/></linearGradient>
-        <radialGradient id="${u}gl"><stop offset="0" stop-color="#fbbf24" stop-opacity=".55"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
-        <linearGradient id="${u}cn" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fde68a" stop-opacity=".35"/><stop offset="1" stop-color="#fde68a" stop-opacity="0"/></linearGradient>
-        <linearGradient id="${u}gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fef3c7"/><stop offset=".45" stop-color="#f59e0b"/><stop offset="1" stop-color="#b45309"/></linearGradient>
-        <linearGradient id="${u}fl" x1="0" x2="1"><stop offset="0" stop-color="#e11d48"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
-        <linearGradient id="${u}ry" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fde68a" stop-opacity=".5"/><stop offset="1" stop-color="#fde68a" stop-opacity="0"/></linearGradient>
-      </defs>
-      <rect x="-400" width="1000" height="300" fill="url(#${u}bg)"/>
-      ${stars(r, 26, 0, 130)}${rain}
-      ${cone(28, 0)}${cone(172, -3)}
-      ${firework(42, 66, '#f472b6', 0)}${firework(160, 56, '#67e8f9', 1.1)}${firework(150, 112, '#fde68a', 2.2)}
-      ${glow(u, 100, 132, 66, 'a-throb', '--dur:3s;--s:1.12')}
-      ${[88, 96, 104, 112].map((x, i) => `<rect x="${x - 1}" y="60" width="2" height="78" fill="url(#${u}ry)" class="a-pulse" style="--dur:${f(1.6 + i * 0.3)}s;--lo:.2;animation-delay:-${i * 0.4}s"/>`).join('')}
-      <rect x="46" y="158" width="36" height="30" rx="2" fill="#2e1a4f" stroke="#a78bfa" stroke-opacity=".5"/>
-      <text x="64" y="179" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="14" fill="#c4b5fd">2</text>
-      <rect x="118" y="166" width="36" height="22" rx="2" fill="#2e1a4f" stroke="#a78bfa" stroke-opacity=".5"/>
-      <text x="136" y="182" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#c4b5fd">3</text>
-      <rect x="82" y="138" width="36" height="50" rx="2" fill="url(#${u}gd)"/>
-      <rect x="82" y="138" width="36" height="4" fill="#fef3c7" opacity=".7"/>
-      <text x="100" y="172" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="24" fill="#78350f">1</text>
-      <rect x="28" y="188" width="144" height="3" rx="1.5" fill="#fbbf24" opacity=".45"/>
-      <line x1="100" y1="138" x2="100" y2="46" stroke="#fde68a" stroke-width="2"/>
-      <circle cx="100" cy="44" r="3.4" fill="#fef3c7"/>
-      <circle cx="100" cy="44" r="3.4" fill="none" stroke="#fde68a" stroke-width="1.2" class="a-ripple" style="--dur:2.4s;--s:5"/>
-      <g class="sc-wave"><path d="M101 48 C114 44 128 54 148 47 V77 C128 84 114 73 101 77 Z" fill="url(#${u}fl)"/>
-        <text x="124" y="66" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" letter-spacing="1" fill="#fff7ed">1ST</text></g>
-      <rect x="54" y="18" width="92" height="15" rx="7.5" fill="#0b0614" stroke="#fbbf24" stroke-opacity=".7"/>
-      <text x="100" y="28.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#fde68a" class="a-pulse" style="--dur:2s;--lo:.55">RANK #1 · 26 TEAMS</text>
-      ${sparkle(30, 140, 5, '#fef3c7', '--dur:2.4s')}${sparkle(172, 146, 4, '#fef3c7', '--dur:3s;animation-delay:-1s')}
-      ${confetti}`;
-  };
+  /* ---------- S6 · Cyber Fest CTF: a first-place flag on a ringed planet ---------- */
+  S.ctf = (u, r) =>
+    bg(u, '#1c0b33', '#040208', '#fbbf24') + stars(r, 22, 0, 150) + glow(u, 100, 124, 66, 'a-throb', '--dur:7s') +
+    `<defs><radialGradient id="${u}pl" cx="35%" cy="28%"><stop offset="0" stop-color="#fde68a"/><stop offset=".45" stop-color="#d97706"/><stop offset="1" stop-color="#3b1a06"/></radialGradient>
+      <linearGradient id="${u}fl" x1="0" x2="1"><stop offset="0" stop-color="#e11d48"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+      <clipPath id="${u}pc"><circle cx="100" cy="150" r="32"/></clipPath>
+      <clipPath id="${u}rf"><rect x="-50" y="150" width="300" height="80"/></clipPath></defs>
+    <g transform="rotate(-12 100 150)"><ellipse cx="100" cy="150" rx="56" ry="11" fill="none" stroke="#fde68a" stroke-opacity=".3" stroke-width="2"/></g>
+    <circle cx="100" cy="150" r="32" fill="url(#${u}pl)"/>
+    <g clip-path="url(#${u}pc)" fill="#fef3c7" opacity=".18"><rect x="60" y="140" width="80" height="3"/><rect x="60" y="152" width="80" height="2"/><rect x="60" y="162" width="80" height="4"/></g>
+    <path d="M76 134 A32 32 0 0 1 110 120" stroke="#fff7ed" stroke-opacity=".45" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <g transform="rotate(-12 100 150)">
+      <ellipse cx="100" cy="150" rx="56" ry="11" fill="none" stroke="#fde68a" stroke-opacity=".8" stroke-width="2.2" clip-path="url(#${u}rf)"/>
+      ${orbit(100, 150, 66, 13, 12, 0, '<circle r="3.2" fill="#fef3c7"/>')}
+    </g>
+    <line x1="100" y1="119" x2="100" y2="62" stroke="#fde68a" stroke-width="2.2"/>
+    <circle cx="100" cy="60" r="3.2" fill="#fef3c7"/>
+    <circle cx="100" cy="60" r="3.2" fill="none" stroke="#fde68a" stroke-width="1.2" vector-effect="non-scaling-stroke" class="a-ripple" style="--dur:4s;--s:4"/>
+    <g class="sc-wave" style="animation-duration:3.4s"><path d="M101 64 C114 59 126 70 146 63 V92 C126 99 114 88 101 93 Z" fill="url(#${u}fl)"/>
+      <text x="123" y="83" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" letter-spacing=".5" fill="#fff7ed">1ST</text></g>
+    ${sparkle(150, 120, 4, '#fef3c7', '--dur:4s')}${sparkle(52, 98, 3, '#fff', '--dur:5s;animation-delay:-2s')}`;
 
-  /* ---------- S6 · InnovAtrium: gears behind the university ---------- */
+  /* ---------- S6 · InnovAtrium: two interlocking gears ---------- */
   S.innovatrium = (u, r) =>
-    bg(u, '#081530', '#020509', '#93c5fd') + stars(r, 22) + glow(u, 100, 80, 70, 'a-pulse', '--dur:4s;--lo:.4') +
-    `<g class="a-spin" style="--dur:14s"><path d="${gear(70, 70, 30, 12)}" fill="#1d4ed8" opacity=".9"/></g><circle cx="70" cy="70" r="9" fill="#081530"/>
-    <g class="a-spin-r" style="--dur:10.5s"><path d="${gear(121, 58, 22, 9)}" fill="#60a5fa"/></g><circle cx="121" cy="58" r="6" fill="#081530"/>
-    <g class="a-spin" style="--dur:8s"><path d="${gear(150, 92, 14, 7)}" fill="#93c5fd" opacity=".8"/></g><circle cx="150" cy="92" r="4" fill="#081530"/>
-    <path d="M50 114 L100 92 L150 114 Z" fill="#0f1d38" stroke="#93c5fd"/>
-    <rect x="52" y="114" width="96" height="8" fill="#13254a" stroke="#93c5fd" stroke-opacity=".7"/>
-    ${[0, 1, 2, 3, 4].map(i => `<rect x="${58 + i * 19}" y="122" width="8" height="42" fill="#13254a" stroke="#93c5fd" stroke-opacity=".55"/>`).join('')}
-    <rect x="93" y="140" width="14" height="24" rx="2" fill="#fde68a" class="a-pulse" style="--dur:3s;--lo:.35"/>
-    <rect x="48" y="164" width="104" height="6" fill="#1e3a8a"/><rect x="42" y="170" width="116" height="6" fill="#172554"/>`;
+    bg(u, '#081530', '#020509', '#93c5fd') + stars(r, 20, 0, 150) + glow(u, 100, 112, 58, 'a-throb', '--dur:7s') +
+    `<g class="a-spin" style="--dur:24s"><path d="${gear(88, 116, 28, 12)}" fill="#1d4ed8"/></g><circle cx="88" cy="116" r="8" fill="#081530"/>
+    <g class="a-spin-r" style="--dur:18s"><path d="${gear(128, 94, 19, 9)}" fill="#60a5fa"/></g><circle cx="128" cy="94" r="5.5" fill="#081530"/>`;
 
-  /* ---------- S7 · Axionox: QA inspecting an automation flow ---------- */
+  /* ---------- S7 · Axionox: QA inspecting each step of an automation ---------- */
   S.axionox = (u, r) => {
-    const N = [[58, 62, 'Trigger'], [142, 94, 'Automate'], [58, 126, 'Deliver'], [142, 158, 'QA']];
-    const nodes = N.map(([x, y, t]) => `<rect x="${x - 27}" y="${y - 11}" width="54" height="22" rx="11" fill="#1e1036" stroke="#a78bfa"/><text x="${x}" y="${y + 3}" text-anchor="middle" ${MONO} font-size="7.5" fill="#e9d5ff">${t}</text>`).join('');
-    let links = '';
-    for (let i = 0; i < 3; i++) {
-      const [x1, y1] = N[i], [x2, y2] = N[i + 1];
-      const d = `M${x1 + (x2 > x1 ? 27 : -27)} ${y1} C${x2} ${y1} ${x1} ${y2} ${x2 + (x2 > x1 ? -27 : 27)} ${y2}`;
-      links += `<path d="${d}" fill="none" stroke="#a78bfa" stroke-opacity=".3"/><path d="${d}" fill="none" stroke="#f0abfc" stroke-width="1.4" stroke-dasharray="4 7" class="a-dash" style="--off:-22px;--dur:1s"/>`;
-    }
-    return bg(u, '#1f0b36', '#05020a', '#c084fc') + stars(r, 22) + glow(u, 100, 110, 80, 'a-pulse', '--dur:4s;--lo:.3') + links + nodes +
-      `<g class="a-pop" style="--dur:8s;animation-delay:5.4s"><circle cx="176" cy="158" r="8" fill="#22c55e"/><path d="M172 158 l3 3 l6 -6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g>
-      <g class="sc-mag"><circle cx="0" cy="0" r="12" fill="#fde68a" fill-opacity=".12" stroke="#fde68a" stroke-width="2.5"/><line x1="9" y1="9" x2="18" y2="18" stroke="#fde68a" stroke-width="4" stroke-linecap="round"/></g>`;
+    const icons = [
+      '<path d="M66 112 l-5 8 h4 l-2 7 l7 -9 h-4 l2 -6 z" fill="#e9d5ff"/>',
+      '<circle cx="100" cy="120" r="5" fill="none" stroke="#e9d5ff" stroke-width="2" stroke-dasharray="2 1.6"/><circle cx="100" cy="120" r="1.8" fill="#e9d5ff"/>',
+      '<path d="M131 120 l3.5 3.5 l7 -7.5" stroke="#86efac" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+    ];
+    const peak = [-4.5, -1.8, -7.65];
+    const nodes = [64, 100, 136].map((x, i) => `
+      <rect x="${x - 12}" y="108" width="24" height="24" rx="7" fill="#1e1036" stroke="#a78bfa" stroke-opacity=".8"/>
+      <g opacity=".4"><rect x="${x - 12}" y="108" width="24" height="24" rx="7" fill="${i === 2 ? '#22c55e' : '#c084fc'}" class="a-pulse" style="--dur:9s;--lo:0;animation-delay:${peak[i]}s"/></g>
+      ${icons[i]}`).join('');
+    return bg(u, '#1f0b36', '#05020a', '#c084fc') + stars(r, 20, 0, 150) + glow(u, 100, 118, 62, 'a-throb', '--dur:7s') +
+      `<path d="M76 120 H88 M112 120 H124" stroke="#a78bfa" stroke-opacity=".6" stroke-width="1.4" stroke-dasharray="3 3" class="a-dash" style="--off:-12px;--dur:1.6s"/>
+      ${nodes}
+      <g class="sc-scanx"><circle cx="0" cy="0" r="18" fill="#c084fc" fill-opacity=".08" stroke="#e9d5ff" stroke-width="2.4"/>
+        <line x1="13" y1="13" x2="24" y2="24" stroke="#e9d5ff" stroke-width="4.5" stroke-linecap="round"/></g>`;
   };
 
   /* ---------- S7 · Thesis: a wearable that only scans on events ---------- */
@@ -696,56 +428,27 @@ window.POSTERS = (function () {
   /* ======================== CERTIFICATION EMBLEMS ========================
      Drawn for the landscape 'thumb' framing (focus on y 50 to 190). */
 
-  /* UNITAR · Women's Leadership in Disaster Risk Reduction: a dome shields the globe from the storm */
-  S['cert-unitar'] = (u, r) => {
-    let rain = '';
-    for (let i = 0; i < 26; i++) {
-      rain += `<g transform="translate(${f(r() * 200)} 0)"><line x1="0" y1="0" x2="-3" y2="9" stroke="#7dd3fc" stroke-opacity=".6" stroke-width="1" class="a-fall" style="--dur:${f(0.9 + r() * 0.7)}s;animation-delay:-${f(r() * 2)}s;--fy0:30px;--fy1:200px;--rot:0deg"/></g>`;
-    }
-    return bg(u, '#071a2b', '#030a12', '#2dd4bf') + stars(r, 14, 50, 110) +
-      `<defs><clipPath id="${u}out"><path fill-rule="evenodd" clip-rule="evenodd" d="M-50 40 H250 V200 H-50 Z M44 150 A56 56 0 0 1 156 150 V200 H44 Z"/></clipPath></defs>
-      <g fill="#1e293b" opacity=".9"><ellipse cx="62" cy="62" rx="26" ry="9"/><ellipse cx="82" cy="58" rx="20" ry="10"/><ellipse cx="140" cy="60" rx="28" ry="9"/><ellipse cx="160" cy="56" rx="18" ry="9"/></g>
-      <path d="M150 64 l-6 12 h6 l-5 12" stroke="#fde68a" stroke-width="1.8" fill="none" stroke-linejoin="round" class="sc-bolt"/>
-      <g clip-path="url(#${u}out)">${rain}</g>
-      ${glow(u, 100, 150, 60, 'a-pulse', '--dur:4s;--lo:.4')}
-      <path d="M44 150 A56 56 0 0 1 156 150" fill="#2dd4bf" fill-opacity=".07" stroke="#5eead4" stroke-width="1.6" class="a-pulse" style="--dur:2.6s;--lo:.55"/>
-      <circle cx="100" cy="160" r="30" fill="#0f2f3a" stroke="#5eead4" stroke-opacity=".7"/>
-      <g fill="none" stroke="#5eead4" stroke-opacity=".3"><ellipse cx="100" cy="160" rx="30" ry="9"/><ellipse cx="100" cy="160" rx="12" ry="30"/></g>
-      <path d="M86 148 c6-4 12 2 18 -2 M92 166 c5 3 10 -1 16 2" stroke="#34d399" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      ${sparkle(100, 88, 6, '#fde68a', '--dur:2.4s')}
-      <rect x="-50" y="186" width="300" height="20" fill="#030a12"/>`;
-  };
+  /* UNITAR · Women's Leadership in Disaster Risk Reduction: a dome shields the globe */
+  S['cert-unitar'] = (u, r) =>
+    bg(u, '#071a2b', '#030a12', '#2dd4bf') + stars(r, 16, 50, 130) + glow(u, 100, 140, 56, 'a-throb', '--dur:7s') +
+    `<path d="M50 160 A50 50 0 0 1 150 160" fill="#2dd4bf" fill-opacity=".07" stroke="#5eead4" stroke-width="1.6" class="a-pulse" style="--dur:5s;--lo:.5"/>
+    <circle cx="100" cy="160" r="28" fill="#0f2f3a" stroke="#5eead4" stroke-opacity=".7"/>
+    <g fill="none" stroke="#5eead4" stroke-opacity=".3"><ellipse cx="100" cy="160" rx="28" ry="8"/><ellipse cx="100" cy="160" rx="11" ry="28"/></g>
+    <rect x="-50" y="182" width="300" height="20" fill="#030a12"/>`;
 
   /* Google Machine Learning Crash Course: gradient descent finds the minimum */
   S['cert-mlcc'] = (u, r) =>
     bg(u, '#0b1030', '#03040d', '#818cf8') + stars(r, 14, 50, 100) +
     `<defs><linearGradient id="${u}cv" x1="0" x2="1"><stop offset="0" stop-color="#818cf8"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
-    <g stroke="#818cf8" stroke-opacity=".12">${[80, 110, 140, 170].map(y => `<line x1="-50" y1="${y}" x2="250" y2="${y}"/>`).join('')}</g>
     <path d="M18 76 C58 76 70 172 100 172 C130 172 142 94 182 72" fill="none" stroke="url(#${u}cv)" stroke-width="2.4"/>
-    <path d="M18 76 C58 76 70 172 100 172 C130 172 142 94 182 72 V190 H18 Z" fill="url(#${u}cv)" opacity=".08"/>
-    ${[[34, 80], [52, 98], [68, 126], [82, 154], [94, 168]].map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="1.6" fill="#c4b5fd" class="a-pulse" style="--dur:3.2s;--lo:0;animation-delay:${f(i * 0.25)}s"/>`).join('')}
-    <circle cx="0" cy="0" r="6" fill="#fde68a" class="sc-gd"/>
-    <circle cx="100" cy="172" r="4" fill="none" stroke="#86efac" stroke-width="1.4" vector-effect="non-scaling-stroke" class="a-ripple" style="--dur:3.2s;--s:3;animation-delay:1.95s"/>
-    <text x="160" y="160" ${MONO} font-size="7" fill="#c4b5fd" opacity=".85">loss ↓</text>
-    <text x="100" y="186" text-anchor="middle" ${MONO} font-size="6.5" fill="#86efac" opacity=".85">minimum found</text>`;
+    <circle cx="0" cy="0" r="6" fill="#fde68a" class="sc-gd"/>`;
 
-  /* Google IT Automation with Python: files go in, checked files come out */
-  S['cert-itauto'] = (u, r) => {
-    const doc = (fill, mark) => `<rect x="-7" y="-9" width="14" height="18" rx="2" fill="${fill}"/><path d="M-4 -4 h8 M-4 0 h8 M-4 4 h5" stroke="#0f172a" stroke-opacity=".35" stroke-width="1"/>${mark}`;
-    const docs = (clip, fill, mark) => `<g clip-path="url(#${u}${clip})">${[0, 1, 2, 3].map(i =>
-      `<g transform="translate(0 150)"><g class="sc-belt" style="animation-delay:-${i * 1.5}s">${doc(fill, mark)}</g></g>`).join('')}</g>`;
-    return bg(u, '#0a1a14', '#030806', '#34d399') + stars(r, 12, 50, 90) +
-      `<defs><clipPath id="${u}in"><rect x="-50" y="100" width="146" height="90"/></clipPath><clipPath id="${u}out"><rect x="104" y="100" width="146" height="90"/></clipPath></defs>
-      <rect x="22" y="58" width="96" height="34" rx="6" fill="#04120c" stroke="#34d399" stroke-opacity=".5"/>
-      <text x="30" y="72" ${MONO} font-size="7" fill="#34d399" class="sc-type" style="animation-delay:0s">$ python3 automate.py</text>
-      <text x="30" y="84" ${MONO} font-size="7" fill="#86efac" class="sc-type" style="animation-delay:.8s">✓ 128 files sorted</text>
-      <rect x="-50" y="160" width="300" height="5" rx="2.5" fill="#134e4a"/>
-      <g stroke="#34d399" stroke-opacity=".35" class="sc-beltmark">${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => `<line x1="${i * 26 - 26}" y1="160" x2="${i * 26 - 18}" y2="165"/>`).join('')}</g>
-      ${docs('in', '#e2e8f0', '')}
-      ${docs('out', '#86efac', '<path d="M-3 6 l2 2 l4 -4" stroke="#065f46" stroke-width="1.6" fill="none"/>')}
-      <g class="a-spin" style="--dur:4s"><path d="${gear(100, 132, 22, 10)}" fill="#10b981"/></g><circle cx="100" cy="132" r="7" fill="#0a1a14"/>
-      <text x="100" y="186" text-anchor="middle" ${MONO} font-size="6.5" fill="#86efac" opacity=".85">automated</text>`;
-  };
+  /* Google IT Automation with Python: a turning gear and a check */
+  S['cert-itauto'] = (u, r) =>
+    bg(u, '#0a1a14', '#030806', '#34d399') + stars(r, 12, 50, 110) + glow(u, 100, 122, 52, 'a-throb', '--dur:7s') +
+    `<g class="a-spin" style="--dur:20s"><path d="${gear(100, 122, 30, 12)}" fill="#10b981"/></g>
+    <circle cx="100" cy="122" r="11" fill="#0a1a14"/>
+    <path d="M94 122 l4 4 l8 -8" stroke="#86efac" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
 
   let uid = 0;
   return {

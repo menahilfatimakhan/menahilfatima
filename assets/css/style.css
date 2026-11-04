@@ -4347,6 +4347,18 @@ svg.scene {
   transform-origin: center;
 }
 
+/* Calm posters: no particles, rain, confetti, fireworks or sparks, and still star fields */
+.scene .a-fall,
+.scene .a-rise,
+.scene .sc-fw,
+.scene .sc-burst {
+  display: none;
+}
+
+.scene .st * {
+  animation: none !important;
+}
+
 /* Off-screen scenes are paused (JS adds .is-live while visible) */
 .scene:not(.is-live) *,
 .scene:not(.is-live) {
@@ -4639,6 +4651,29 @@ svg.scene {
 
 .sc-bolt { opacity: 0; animation: sc-bolt 4s linear infinite; }
 @keyframes sc-bolt { 0%, 68%, 76%, 100% { opacity: 0; } 70%, 74% { opacity: 1; } 72% { opacity: .3; } }
+
+.sc-scanx { transform-box: view-box !important; transform-origin: 0 0 !important; transform: translate(64px, 118px); animation: sc-scanx 9s ease-in-out infinite; }
+@keyframes sc-scanx {
+  0%, 8%, 100% { transform: translate(64px, 118px); }
+  30%, 38% { transform: translate(100px, 118px); }
+  60%, 75% { transform: translate(136px, 118px); }
+}
+
+.sc-coin { animation: sc-coin 5s ease-in-out infinite; }
+@keyframes sc-coin { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(.08); } }
+
+.sc-parcel { animation: sc-parcel 6s ease-in-out infinite; }
+@keyframes sc-parcel {
+  0% { transform: translateY(-48px); opacity: 0; }
+  12% { opacity: 1; }
+  55%, 85% { transform: translateY(0); opacity: 1; }
+  95%, 100% { transform: translateY(0); opacity: 0; }
+}
+
+.sc-cartA { animation: sc-cartA 6s steps(1) infinite; }
+.sc-cartB { animation: sc-cartB 6s steps(1) infinite; }
+@keyframes sc-cartA { 0% { opacity: 1; } 55% { opacity: 0; } 96% { opacity: 1; } }
+@keyframes sc-cartB { 0% { opacity: 0; } 55% { opacity: 1; } 96% { opacity: 0; } }
 
 .sc-mag { transform: translate(58px, 62px); }
 

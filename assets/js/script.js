@@ -278,10 +278,23 @@
       : `<span class="poster-gen" style="--h:${hueOf(ep)}"><span class="pg-planet"></span><span class="pg-ring"></span></span>`;
   }
 
-  // Only animate scenes that are on screen
+  /* Poster motion is kept calm: every scene plays at about two-thirds speed, and only while on screen */
+  const CALM_RATE = 0.65;
+  const animsOf = svg => (svg.getAnimations ? svg.getAnimations({ subtree: true }) : []);
+
+  function calmScene(svg) {
+    if (svg._calm) return;
+    svg._calm = true;
+    animsOf(svg).forEach(a => { a.playbackRate = CALM_RATE; });
+  }
+
   const sceneIO = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
-    entries.forEach(e => e.target.classList.toggle('is-live', e.isIntersecting));
+    entries.forEach(e => {
+      e.target.classList.toggle('is-live', e.isIntersecting);
+      if (e.isIntersecting) calmScene(e.target);
+    });
   }, { rootMargin: '100px' }) : null;
+
   function watchScenes(root) {
     $$('svg.scene', root).forEach(svg => (sceneIO ? sceneIO.observe(svg) : svg.classList.add('is-live')));
   }
